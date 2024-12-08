@@ -9,10 +9,10 @@
         <copyright>baozi</copyright>
         <lastBuildDate>Sun, 08 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://baozi.github.io/categories/algorithm/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>算法学习-搜索专题</title>
-        <link>https://baozi.github.io/p/test-chinese/</link>
+        <link>https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E6%90%9C%E7%B4%A2%E4%B8%93%E9%A2%98/</link>
         <pubDate>Sun, 08 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://baozi.github.io/p/test-chinese/</guid>
+        <guid>https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E6%90%9C%E7%B4%A2%E4%B8%93%E9%A2%98/</guid>
         <description>&lt;h2 id=&#34;搜索专题&#34;&gt;搜索专题
 &lt;/h2&gt;&lt;p&gt;搜索算法，包括深度优先搜索和广度优先搜索，从起点开始，逐渐扩大寻找范围，直到找到需要的答案为止。
 严格来说，搜索算法也算是一种暴力枚举策略，但是其算法特性决定了效率比直接的枚举所有答案要高，因为搜索可以跳过一些无效状态，降低问题规模。在算法竞赛中，如果选手无法找到一种高效求解的方法（比如贪心、递推、动态规划、公式推导等），使用搜索也可以解决一些规模较小的情况；而有的任务就是必须使用搜索来完成，因此这是相当重要的策略。&lt;/p&gt;
