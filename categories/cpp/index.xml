@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Cpp on 包子-baozi</title>
+        <link>https://baozi.github.io/categories/cpp/</link>
+        <description>Recent content in Cpp on 包子-baozi</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>baozi</copyright>
+        <lastBuildDate>Sun, 15 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://baozi.github.io/categories/cpp/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>cpp输入输出提速底层分析</title>
+        <link>https://baozi.github.io/p/cpp%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%8F%90%E9%80%9F%E5%BA%95%E5%B1%82%E5%88%86%E6%9E%90/</link>
+        <pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://baozi.github.io/p/cpp%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%8F%90%E9%80%9F%E5%BA%95%E5%B1%82%E5%88%86%E6%9E%90/</guid>
+        <description>&lt;img src="https://baozi.github.io/p/cpp%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%8F%90%E9%80%9F%E5%BA%95%E5%B1%82%E5%88%86%E6%9E%90/card-normal.jpg" alt="Featured image of post cpp输入输出提速底层分析" /&gt;&lt;p&gt;&lt;strong&gt;学习视频链接&lt;/strong&gt;:https://www.bilibili.com/video/BV1UH4y1z7JU/&lt;/p&gt;
+&lt;h2 id=&#34;为何cpp输入输出会变慢和c相比&#34;&gt;为何cpp输入输出会变慢（和C相比）
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;iostream i/o 与 stdio i/o &lt;strong&gt;保持同步&lt;/strong&gt;带来的耗时（取消同步流）&lt;/li&gt;
+&lt;li&gt;cin 与 cout &lt;strong&gt;存在绑定&lt;/strong&gt;耗费时间&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;endl&lt;/strong&gt;相比\n 耗时&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;上述三个原因对于c来说都是没有的，因此在cpp中使用c风格的输入输出可以极大的提速。
+但是c风格的输入输出更适合格式化输出，没有cin和cout的便捷，因此想要同时拥有便捷和速度的话就要解决这三个问题&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;取消同步流&#34;&gt;取消同步流
+&lt;/h3&gt;&lt;p&gt;什么是同步流？
+同步指的是c输出输入与cpp输出输入&lt;strong&gt;保持同步&lt;/strong&gt;，由于cpp为了兼容c，c输出输入与cpp输出输入使用的是&lt;strong&gt;同一块缓冲区&lt;/strong&gt;，我们将其称为&lt;strong&gt;c流缓冲区&lt;/strong&gt;
+&lt;img src=&#34;https://baozi.github.io/p/cpp%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%8F%90%E9%80%9F%E5%BA%95%E5%B1%82%E5%88%86%E6%9E%90/tongbuliu.png&#34;
+	width=&#34;1282&#34;
+	height=&#34;456&#34;
+	srcset=&#34;https://baozi.github.io/p/cpp%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%8F%90%E9%80%9F%E5%BA%95%E5%B1%82%E5%88%86%E6%9E%90/tongbuliu_hu13149677459139178456.png 480w, https://baozi.github.io/p/cpp%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%8F%90%E9%80%9F%E5%BA%95%E5%B1%82%E5%88%86%E6%9E%90/tongbuliu_hu1629515082441621817.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;同步流解析图&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;281&#34;
+		data-flex-basis=&#34;674px&#34;
+	
+&gt;
+如图所示，这个同步操作带来了耗时，我们可以通过以下代码取消同步流&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ios&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sync_with_stdio&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;取消cin与cout绑定&#34;&gt;取消cin与cout绑定
+&lt;/h3&gt;&lt;p&gt;什么是cin与cout绑定？
+这是使输入输出更加安全的一个操作，绑定&lt;strong&gt;指的是每次cin输入前都会刷新cout缓冲区&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/cpp%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%8F%90%E9%80%9F%E5%BA%95%E5%B1%82%E5%88%86%E6%9E%90/cin1.png&#34;
+	width=&#34;704&#34;
+	height=&#34;472&#34;
+	srcset=&#34;https://baozi.github.io/p/cpp%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%8F%90%E9%80%9F%E5%BA%95%E5%B1%82%E5%88%86%E6%9E%90/cin1_hu17192541607897018728.png 480w, https://baozi.github.io/p/cpp%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%8F%90%E9%80%9F%E5%BA%95%E5%B1%82%E5%88%86%E6%9E%90/cin1_hu9938094086143767514.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解除绑定后的程序&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;357px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/cpp%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%8F%90%E9%80%9F%E5%BA%95%E5%B1%82%E5%88%86%E6%9E%90/cin2.png&#34;
+	width=&#34;782&#34;
+	height=&#34;505&#34;
+	srcset=&#34;https://baozi.github.io/p/cpp%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%8F%90%E9%80%9F%E5%BA%95%E5%B1%82%E5%88%86%E6%9E%90/cin2_hu7299651313378907408.png 480w, https://baozi.github.io/p/cpp%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%8F%90%E9%80%9F%E5%BA%95%E5%B1%82%E5%88%86%E6%9E%90/cin2_hu5872122295984583681.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;未解除绑定的程序&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;154&#34;
+		data-flex-basis=&#34;371px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/cpp%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%8F%90%E9%80%9F%E5%BA%95%E5%B1%82%E5%88%86%E6%9E%90/cin3.png&#34;
+	width=&#34;781&#34;
+	height=&#34;491&#34;
+	srcset=&#34;https://baozi.github.io/p/cpp%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%8F%90%E9%80%9F%E5%BA%95%E5%B1%82%E5%88%86%E6%9E%90/cin3_hu137422731092497826.png 480w, https://baozi.github.io/p/cpp%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%8F%90%E9%80%9F%E5%BA%95%E5%B1%82%E5%88%86%E6%9E%90/cin3_hu17416488252471718096.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解除绑定，但人为刷新缓冲区的程序&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;159&#34;
+		data-flex-basis=&#34;381px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;解除绑定操作如下&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tie&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tie&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;值得注意的是，cout.tie(0)这个语句似乎是多余的，因为cout本来就与null绑定了,不过由于大家都这么写，所以还是写上&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;用n代替endl&#34;&gt;用&amp;rsquo;\n&amp;rsquo;代替endl
+&lt;/h3&gt;&lt;p&gt;为何endl会比&amp;rsquo;\n&amp;rsquo;慢？
+实际上&lt;strong&gt;endl=&amp;rsquo;\n&amp;rsquo; + 强制刷新缓冲区&lt;/strong&gt;
+也就是说&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;sc&#34;&gt;&amp;#39;\n&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;flush&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;与&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;endl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;是一样的，所以就是这个多出来的&lt;strong&gt;强制刷新缓冲区&lt;/strong&gt;导致的耗时
+&amp;lsquo;\n&amp;rsquo;本身是&lt;strong&gt;不会&lt;/strong&gt;刷新缓冲区的，他会在&lt;strong&gt;下一行代码执行时刷新缓冲区&lt;/strong&gt;
+endl本身是&lt;strong&gt;会&lt;/strong&gt;刷新缓冲区的，并且，&lt;strong&gt;在下一行代码执行时他还会再次刷新&lt;/strong&gt;
+也就是说，&lt;strong&gt;endl&lt;/strong&gt;会比&amp;rsquo;\n&amp;rsquo;多刷新一次缓冲区，所以会慢一些&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其实这也是一种安全性的措施，endl保证了在程序崩溃时，能完成输出，而&amp;rsquo;\n&amp;rsquo;则不能&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;总结&#34;&gt;总结
+&lt;/h3&gt;&lt;p&gt;使cpp风格输入输出提速的解决方法就是&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;取消同步流&lt;/li&gt;
+&lt;li&gt;取消cin与cout绑定&lt;/li&gt;
+&lt;li&gt;用&amp;rsquo;\n&amp;rsquo;代替endl&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ios&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sync_with_stdio&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tie&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tie&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;something&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;sc&#34;&gt;&amp;#39;\n&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
