@@ -380,9 +380,9 @@
     
     
     <h1 id="搜索专题">搜索专题
-</h1><p>搜索算法，包括深度优先搜索和广度优先搜索，从起点开始，逐渐扩大寻找范围，直到找到需要的答案为止。
-严格来说，搜索算法也算是一种暴力枚举策略，但是其算法特性决定了效率比直接的枚举所有答案要高，因为搜索可以跳过一些无效状态，降低问题规模。在算法竞赛中，如果选手无法找到一种高效求解的方法（比如贪心、递推、动态规划、公式推导等），使用搜索也可以解决一些规模较小的情况；而有的任务就是必须使用搜索来完成，因此这是相当重要的策略。
-<img src="/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E6%90%9C%E7%B4%A2/dfs-and-bfs-distinction.jpg"
+</h1><p>搜索算法，包括深度优先搜索和广度优先搜索，从起点开始，逐渐扩大寻找范围，直到找到需要的答案为止。</p>
+<p>严格来说，搜索算法也算是一种暴力枚举策略，但是其算法特性决定了效率比直接的枚举所有答案要高，因为搜索可以跳过一些无效状态，降低问题规模。在算法竞赛中，如果选手无法找到一种高效求解的方法（比如贪心、递推、动态规划、公式推导等），使用搜索也可以解决一些规模较小的情况；而有的任务就是必须使用搜索来完成，因此这是相当重要的策略。</p>
+<p><img src="/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E6%90%9C%E7%B4%A2/dfs-and-bfs-distinction.jpg"
 	width="1910"
 	height="925"
 	srcset="/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E6%90%9C%E7%B4%A2/dfs-and-bfs-distinction_hu17371022172523025910.jpg 480w, /p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E6%90%9C%E7%B4%A2/dfs-and-bfs-distinction_hu14176111495717342278.jpg 1024w"
@@ -396,7 +396,7 @@
 		data-flex-basis="495px"
 	
 >
-学习视频链接：https://www.bilibili.com/video/BV1N24y1W7q4/</p>
+学习视频链接:https://www.bilibili.com/video/BV1N24y1W7q4/</p>
 <hr>
 <h2 id="深度优先搜索">深度优先搜索
 </h2><h3 id="深度优先搜索的特性">深度优先搜索的特性：
@@ -590,14 +590,14 @@
 <li>对于一个位置，有若干种方案选择，他选择了一种，接着下一个位置就只能选择剩下的方案，方案因此逐次递减</li>
 <li>题型
 <ol>
-<li>N皇后问题（简单的版本是棋盘问题）
-分析：
-1.将行视为位置，列视为选择，画出递归树
-2.使用排列枚举方式进行枚举，能够实现每行每列只放一个棋子
-3.使用一个一维数组来记录对于列的选择情况</li>
+<li>N皇后问题（简单的版本是棋盘问题）</li>
 </ol>
 </li>
 </ul>
+<p>分析：</p>
+<p>1.将行视为位置，列视为选择，画出递归树</p>
+<p>2.使用排列枚举方式进行枚举，能够实现每行每列只放一个棋子</p>
+<p>3.使用一个一维数组来记录对于列的选择情况</p>
 <p>棋盘问题<a class="link" href="https://www.acwing.com/problem/content/1116/"  target="_blank" rel="noopener"
     >acwing1114 棋盘问题</a>的代码模板：</p>
 <div class="highlight"><div class="chroma">
@@ -712,11 +712,11 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>八皇后问题：
-<strong>题面</strong>：
-会下国际象棋的人都很清楚：皇后可以在横、竖、斜线上不限步数地吃掉其他棋子。如何将8个皇后放在棋盘上（有8 × 8个方格），使它们谁也不能被吃掉！这就是著名的八皇后问题。
-对于某个满足要求的8皇后的摆放方法，定义一个皇后串a与之对应,a有8个数字，第i个数表示第i行的皇后所处的位数。已经知道8皇后问题一共有92组解。
-现给出一个数b，要求输出第b个合法的八皇后串。串的排序按照字典序从小到大.</p>
+</div><p>八皇后问题：</p>
+<p><strong>题面</strong>：</p>
+<p>会下国际象棋的人都很清楚：皇后可以在横、竖、斜线上不限步数地吃掉其他棋子。如何将8个皇后放在棋盘上（有8 × 8个方格），使它们谁也不能被吃掉！这就是著名的八皇后问题。</p>
+<p>对于某个满足要求的8皇后的摆放方法，定义一个皇后串a与之对应,a有8个数字，第i个数表示第i行的皇后所处的位数。已经知道8皇后问题一共有92组解。</p>
+<p>现给出一个数b，要求输出第b个合法的八皇后串。串的排序按照字典序从小到大.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -840,8 +840,8 @@
 <li>如何表示<strong>左斜角线</strong>和<strong>右斜角线</strong>？假设皇后在（2、4），对于（1，3）、（3，5）、（4、6）这些在右斜线上的点，都有<strong>y-x=定值</strong>，同理，左斜线为<strong>x+y=定值</strong>。于是，就可以得出</li>
 </ol>
 <blockquote>
-<p>左斜角线：ls[i+j]=1;
-右斜角线：rs[i-j+n]=1; n即为行数，此处为8</p>
+<p>左斜角线：ls[i+j]=1;</p>
+<p>右斜角线：rs[i-j+n]=1; n即为行数，此处为8</p>
 </blockquote>
 <ul>
 <li>排列型枚举的代码模板</li>
@@ -1045,8 +1045,8 @@
 <h3 id="例题">例题：
 </h3><h4 id="迷宫问题">迷宫问题
 </h4><p><strong>例题acwing844</strong>.走迷宫是经典模板题，然而要钱，所以题目平替用<a class="link" href="https://www.luogu.com.cn/problem/P1746"  target="_blank" rel="noopener"
-    >P1746</a>
-因为都是一个思想，所以我们贴上acwing844的代码</p>
+    >P1746</a></p>
+<p>因为都是一个思想，所以我们贴上acwing844的代码</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1185,8 +1185,9 @@
 <li>队列实现bfs，为何用队列？<strong>正如以上所说，我们需要一层层去遍历到所有结点，那么相邻结点的访问顺序如何确定呢？因此我们就需要一个数据结构去存储和操作，需要使先遍历到的结点先被存储，直到当前层都被存储之后，按照存储的先后顺序，先被存储的结点也会被先取出来，继续遍历他的子节点&ndash;&gt;综上所述，需要一种特点为先进先出的数据结构，也就是队列</strong></li>
 </ol>
 <p><strong>例题</strong>:<a class="link" href="https://www.luogu.com.cn/problem/P1443"  target="_blank" rel="noopener"
-    >P1443 马的遍历</a>
-<strong>题目分析</strong>：这一题与普通迷宫问题不同的是<strong>方向向量数组要变化</strong>，总共有八种方向选择，并且，这一题如果<strong>用STL会有样例过不了</strong>，<strong>如果确定思路没错，实现代码正确，但是会超时的话，我们就要自己手写队列。</strong></p>
+    >P1443 马的遍历</a></p>
+<p><strong>题目分析</strong>：</p>
+<p>这一题与普通迷宫问题不同的是<strong>方向向量数组要变化</strong>，总共有八种方向选择，并且，这一题如果<strong>用STL会有样例过不了</strong>，<strong>如果确定思路没错，实现代码正确，但是会超时的话，我们就要自己手写队列。</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1294,8 +1295,9 @@
 </ol>
 <h4 id="多元bfs">多元BFS
 </h4><p><strong>例题</strong>：<a class="link" href="https://www.luogu.com.cn/problem/P1332"  target="_blank" rel="noopener"
-    >p1332血色先锋队</a>
-<strong>题目分析</strong>：题目中瘟疫源，即<strong>bfs的起点</strong>有好几个，此时就要想到，bfs的思想是<strong>一层一层的遍历</strong>，把起点也算<strong>一层</strong>，那么我们就需要把所有的起点都入队，自然就能实现多元bfs。</p>
+    >p1332血色先锋队</a></p>
+<p><strong>题目分析</strong>：</p>
+<p>题目中瘟疫源，即<strong>bfs的起点</strong>有好几个，此时就要想到，bfs的思想是<strong>一层一层的遍历</strong>，把起点也算<strong>一层</strong>，那么我们就需要把所有的起点都入队，自然就能实现多元bfs。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1416,9 +1418,10 @@
 </div>
 </div><h4 id="染色问题">染色问题
 </h4><p><strong>例题</strong>: <a class="link" href="https://www.luogu.com.cn/problem/P1162"  target="_blank" rel="noopener"
-    >P1162 填涂颜色</a>
-<strong>题目分析</strong>：此题要把1围成的一个圈内的0都变为2，那么如何判定圈内0和圈外0呢？我们可以用一个<strong>二维状态数组</strong>，首先用<strong>bfs</strong>把圈外的0都标记为true，然后在主函数中遍历一遍地图，把为0并且状态数组为false的换为2即可。<strong>但是，这类问题要注意边界问题</strong>，<strong>我们一般起点以（1，1）开始，但是若是坐标（1，1）的点就是1，就不对了。并且，也有可能会出现最上面一些0，中间是一块1圈，最下面还有0，这种情况普通bfs也够不到那些下面的0。</strong>
-因此，我们可以把地图<strong>扩大一圈</strong>，假设地图边界为<strong>1&ndash;n</strong>，那我们就可以搜索<strong>0&ndash;n+1</strong>，这样就保证了可以把所有圈外的0标记为true，之后输出的时候再用<strong>1-n</strong>输出即可。</p>
+    >P1162 填涂颜色</a></p>
+<p><strong>题目分析</strong>：</p>
+<p>此题要把1围成的一个圈内的0都变为2，那么如何判定圈内0和圈外0呢？我们可以用一个<strong>二维状态数组</strong>，首先用<strong>bfs</strong>把圈外的0都标记为true，然后在主函数中遍历一遍地图，把为0并且状态数组为false的换为2即可。<strong>但是，这类问题要注意边界问题</strong>，<strong>我们一般起点以（1，1）开始，但是若是坐标（1，1）的点就是1，就不对了。并且，也有可能会出现最上面一些0，中间是一块1圈，最下面还有0，这种情况普通bfs也够不到那些下面的0。</strong></p>
+<p>因此，我们可以把地图<strong>扩大一圈</strong>，假设地图边界为<strong>1&ndash;n</strong>，那我们就可以搜索<strong>0&ndash;n+1</strong>，这样就保证了可以把所有圈外的0标记为true，之后输出的时候再用<strong>1-n</strong>输出即可。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1561,8 +1564,9 @@
 </div>
 </div><h4 id="flood-fill-连通块问题">flood fill 连通块问题
 </h4><p><strong>例题</strong>:<a class="link" href="https://www.luogu.com.cn/problem/P1451"  target="_blank" rel="noopener"
-    >P1451求细胞数量</a>
-<strong>题目分析</strong>:这一题要找非0数字的<strong>联通块</strong>数，所谓联通块，就是指<strong>图中一块都是相同类型的点</strong>，本题中<strong>连通块的定义为沿连通块数字上下左右若还是连通块数字则为同一连通块</strong>,那么我们确定了方向向量是<strong>四个方向</strong>（有时会是8个方向）,要确定一个连通块，我们就可以分两个步骤，第一步是<strong>找到一个连通块的起始点</strong>，第二步是<strong>从这个起始点开始bfs把所有符合条件的点标记为true</strong>，然后<strong>连通块数++</strong>。如此循环直到所有符合条件点被标记为true，循环结束。<strong>标记为true是为了第一步找到的起始点还在以及搜过的连通块中</strong>。</p>
+    >P1451求细胞数量</a></p>
+<p><strong>题目分析</strong>:</p>
+<p>这一题要找非0数字的<strong>联通块</strong>数，所谓联通块，就是指<strong>图中一块都是相同类型的点</strong>，本题中<strong>连通块的定义为沿连通块数字上下左右若还是连通块数字则为同一连通块</strong>,那么我们确定了方向向量是<strong>四个方向</strong>（有时会是8个方向）,要确定一个连通块，我们就可以分两个步骤，第一步是<strong>找到一个连通块的起始点</strong>，第二步是<strong>从这个起始点开始bfs把所有符合条件的点标记为true</strong>，然后<strong>连通块数++</strong>。如此循环直到所有符合条件点被标记为true，循环结束。<strong>标记为true是为了第一步找到的起始点还在以及搜过的连通块中</strong>。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1706,12 +1710,16 @@
 </div><p><strong>小技巧</strong>：若要从g[1][1]开始输入字符串，可以用g[i]+1。</p>
 <h4 id="有外界干扰的迷宫问题">有外界干扰的迷宫问题
 </h4><p><strong>例题</strong>:<a class="link" href="https://www.luogu.com.cn/problem/P2895"  target="_blank" rel="noopener"
-    >P2895 Meteor Shower S</a> 天降陨石
-<strong>题目分析</strong>:这一题是一道迷宫问题，求出起点到终点的最短路径，<strong>但在不同时间段会有陨石干扰，即到达某点的时间不能超过陨石到达的时间</strong>。
-那么，我们就能分析出什么点是能走的：<strong>1.该点始终都没有被陨石砸到2.该点未被走过3.贝蒂走到该点的时间小于陨石砸到该点的时间</strong>
-那么，我们可以开两个二维数组，一个<strong>预处理记录所有陨石砸到某点的时间</strong>，一个<strong>在bfs用于记录贝蒂走到某点的时间</strong>
-最短时间在哪找到？<strong>这个点始终不会被陨石砸到</strong>，只要找到第一个这个点就是最短时间了
-并且，这一题要关注到<strong>陨石砸下的位置是可能重复的</strong>，所以我们要取<strong>所有陨石砸下的时间的最小值</strong></p>
+    >P2895 Meteor Shower S</a> 天降陨石</p>
+<p><strong>题目分析</strong>:</p>
+<p>这一题是一道迷宫问题，求出起点到终点的最短路径，<strong>但在不同时间段会有陨石干扰，即到达某点的时间不能超过陨石到达的时间</strong>。</p>
+<p>那么，我们就能分析出什么点是能走的：</p>
+<p><strong>1.该点始终都没有被陨石砸到</strong></p>
+<p><strong>2.该点未被走过</strong></p>
+<p><strong>3.贝蒂走到该点的时间小于陨石砸到该点的时间</strong></p>
+<p>那么，我们可以开两个二维数组，一个<strong>预处理记录所有陨石砸到某点的时间</strong>，一个<strong>在bfs用于记录贝蒂走到某点的时间</strong></p>
+<p>最短时间在哪找到？<strong>这个点始终不会被陨石砸到</strong>，只要找到第一个这个点就是最短时间了</p>
+<p>并且，这一题要关注到<strong>陨石砸下的位置是可能重复的</strong>，所以我们要取<strong>所有陨石砸下的时间的最小值</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1863,19 +1871,20 @@
 </div><p><strong>小技巧</strong>：memset(数组名，0x3f,sizeof(数组名))，可以把数组初始化为无穷大，因为memset是按字节赋值的.
 4个字节均为0x3f时，0x3f3f3f3f的十进制是1061109567，也就是10^ 9级别的（和0x7fffffff一个数量级），而一般场合下的数据都是小于10^9的，所以它可以作为无穷大使用而不致出现数据大于无穷大的情形。（如果数据远大于1e9就不行了）</p>
 <blockquote>
-<p>void memset(void *s, int ch, size_t n);
-函数解释：
-将s中前n个字节 （typedef unsigned int size_t ）用 ch<br>
-替换并返回 s 。 其实这里面的ch就是ascii为ch的字符；
-将s所指向的某一块内存中的前n个 字节的内容全部设置为ch指定的ASCII值</p>
+<p>void memset(void *s, int ch, size_t n);</p>
+<p>函数解释：</p>
+<p>将s中前n个字节 （typedef unsigned int size_t ）用 ch</p>
+<p>替换并返回 s 。 其实这里面的ch就是ascii为ch的字符；</p>
+<p>将s所指向的某一块内存中的前n个 字节的内容全部设置为ch指定的ASCII值</p>
 </blockquote>
 <h4 id="双向广搜满足条件可以使用的优化">双向广搜（满足条件可以使用的优化）
-</h4><p>与普通的BFS不同，双向BFS维护的<strong>队列中分别有起点搜索出的点和终点搜索出的点</strong>，两个点的搜索交替进行。同时，用<strong>数组</strong>或是<strong>哈希表</strong>记录当前的搜索情况，给从两个方向拓展的节点以<strong>不同的标记</strong>。当某点被<strong>两种标记</strong>同时标记时，搜索结束
-<strong>使用条件</strong>：当起点和终点状态<strong>已知</strong>，则可以使用
-<strong>优点</strong>：可以<strong>减少时间</strong>
-<strong>缺点</strong>：必须确定<strong>起点和终点</strong>，在对状态进行标记时往往涉及状态的<strong>压缩</strong>
-<strong>例题</strong>:<a class="link" href="https://www.luogu.com.cn/problem/P1746"  target="_blank" rel="noopener"
-    >P1746离开中山路</a> 运用<strong>数组</strong>的双向广搜</p>
+</h4><p>与普通的BFS不同，双向BFS维护的<strong>队列中分别有起点搜索出的点和终点搜索出的点</strong>，两个点的搜索交替进行。同时，用<strong>数组</strong>或是<strong>哈希表</strong>记录当前的搜索情况，给从两个方向拓展的节点以<strong>不同的标记</strong>。当某点被<strong>两种标记</strong>同时标记时，搜索结束</p>
+<p><strong>使用条件</strong>：当起点和终点状态<strong>已知</strong>，则可以使用</p>
+<p><strong>优点</strong>：可以<strong>减少时间</strong></p>
+<p><strong>缺点</strong>：必须确定<strong>起点和终点</strong>，在对状态进行标记时往往涉及状态的<strong>压缩</strong></p>
+<p><strong>例题</strong>:<a class="link" href="https://www.luogu.com.cn/problem/P1746"  target="_blank" rel="noopener"
+    >P1746离开中山路</a></p>
+<p>运用<strong>数组</strong>的双向广搜</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2019,17 +2028,16 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>例题二</strong>：<a class="link" href="https://www.luogu.com.cn/problem/P1379"  target="_blank" rel="noopener"
-    >p1379 八数码难题</a> 运用<strong>哈希表</strong>的双向广搜，并且运用了<strong>状态压缩</strong>的方法
-<strong>题目分析</strong>:
-根据题目，我们可以画出<strong>搜索树</strong>，但是问题是<strong>如何表示状态呢</strong>，用二维数组表示状态会十分麻烦，不过题目给了我们提示，使用<strong>一维的字符串</strong>，这就是<strong>状态压缩，将二维降维为一维</strong>,同时，我们可以用<strong>哈希表</strong>记录<strong>状态是否被访问过</strong>，还有，这题给出了<strong>起点和终点，所以我们还可以双向广搜（双向广搜作为一个优化的办法，如果题目数据不大，可以不用，毕竟代码量多容易错）</strong></p>
-<ol>
-<li><strong>状态压缩</strong>：首先，我们要明确<strong>用一维字符串进行状态的存储</strong>，<strong>假如要进行变换，那就要用二维数组进行</strong>，所以，我们要解决<strong>一维变二维和二维变一维</strong>的问题
-题目中规定了矩阵是<strong>3*3</strong>的，那么，用一维数组<strong>下标</strong>来表示<strong>二维数组</strong>的<strong>行和列</strong>，就是<strong>一维数组下标/3&ndash;&gt;行,一维数组下标%3&ndash;&gt;列(注意这里以(0,0)开头)</strong>
-题目只要求移动0，所以我们就可以找到0的位置(string.find(&lsquo;0&rsquo;)),然后再表示即可
-若要将二维下标转为一维，则是<strong>一维下标=二维行下标*3+二维列下标</strong>.</li>
-<li><strong>哈希表</strong>：<strong>哈希表</strong>其实就是stl中的<strong>map</strong>或<strong>unordered_map</strong>容器，我们把<strong>每次的状态</strong>作为<strong>key-键</strong>，变换次数<strong>作为值</strong>，这样就可以<strong>记录状态是否被访问过</strong></li>
-<li><strong>双向广搜</strong>：这里要注意的就是记录情况要用<strong>哈希表</strong></li>
-</ol>
+    >p1379 八数码难题</a></p>
+<p>运用<strong>哈希表</strong>的双向广搜，并且运用了<strong>状态压缩</strong>的方法</p>
+<p><strong>题目分析</strong>:</p>
+<p>根据题目，我们可以画出<strong>搜索树</strong>，但是问题是<strong>如何表示状态呢</strong>，用二维数组表示状态会十分麻烦，不过题目给了我们提示，使用<strong>一维的字符串</strong>，这就是<strong>状态压缩，将二维降维为一维</strong>,同时，我们可以用<strong>哈希表</strong>记录<strong>状态是否被访问过</strong>，还有，这题给出了<strong>起点和终点，所以我们还可以双向广搜（双向广搜作为一个优化的办法，如果题目数据不大，可以不用，毕竟代码量多容易错）</strong></p>
+<p><strong>状态压缩</strong>：首先，我们要明确<strong>用一维字符串进行状态的存储</strong>，<strong>假如要进行变换，那就要用二维数组进行</strong>，所以，我们要解决<strong>一维变二维和二维变一维</strong>的问题</p>
+<p>题目中规定了矩阵是<strong>3*3</strong>的，那么，用一维数组<strong>下标</strong>来表示<strong>二维数组</strong>的<strong>行和列</strong>，就是<strong>一维数组下标/3&ndash;&gt;行,一维数组下标%3&ndash;&gt;列(注意这里以(0,0)开头)</strong></p>
+<p>题目只要求移动0，所以我们就可以找到0的位置(string.find(&lsquo;0&rsquo;)),然后再表示即可
+若要将二维下标转为一维，则是<strong>一维下标=二维行下标*3+二维列下标</strong>.</p>
+<p><strong>哈希表</strong>：<strong>哈希表</strong>其实就是stl中的<strong>map</strong>或<strong>unordered_map</strong>容器，我们把<strong>每次的状态</strong>作为<strong>key-键</strong>，变换次数<strong>作为值</strong>，这样就可以<strong>记录状态是否被访问过</strong></p>
+<p><strong>双向广搜</strong>：这里要注意的就是记录情况要用<strong>哈希表</strong></p>
 <p><strong>无优化的代码</strong>：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2307,8 +2315,9 @@
 <h4 id="状态压缩">状态压缩
 </h4><p><strong>状态压缩</strong>的目的是将一个二维的状态<strong>转为一维</strong>，这样记录状态<strong>会十分方便</strong>，涉及到状态压缩一般就会使用<strong>字符串和哈希表</strong></p>
 <p><strong>例题</strong>：<a class="link" href="https://www.luogu.com.cn/problem/P2730"  target="_blank" rel="noopener"
-    >P2730 [USACO3.2] 魔板 Magic Squares</a>
-<strong>题目分析</strong>:这题的难点有三个，第一个是<strong>如何表示状态</strong>，第二个是<strong>如何输出到达目标状态使用的所有基本操作</strong>，第三个是<strong>如何实现这三种基本操作</strong></p>
+    >P2730 [USACO3.2] 魔板 Magic Squares</a></p>
+<p><strong>题目分析</strong>:</p>
+<p>这题的难点有三个，第一个是<strong>如何表示状态</strong>，第二个是<strong>如何输出到达目标状态使用的所有基本操作</strong>，第三个是<strong>如何实现这三种基本操作</strong></p>
 <ol>
 <li><strong>状态表示</strong>：这题是一个2*4的<strong>矩阵</strong>，显然我们可以用状态压缩表示状态，关键是如何进行三种基本操作。</li>
 <li><strong>如何输出到达目标状态使用的所有基本操作</strong>：首先我们要知道如何记录到达一个状态所用的基本操作，我们可以用<strong>哈希表</strong>记录，那么键为<strong>当前状态</strong>，并且，我们还可以再记录上一个状态，方便输出，值就为pair&lt;char,string&gt;&ndash;&gt;<strong>first为基本操作，second为上一个状态</strong>,如此只要从目标状态开始，不断地<strong>回溯到起点</strong>，就可以<strong>得到逆序的基本操作表</strong>，再<strong>反转函数</strong>用一下就好了</li>
@@ -2600,8 +2609,9 @@
 </h4><p>与普通广搜不同的是，<strong>双端队列广搜</strong>使用的容器是<strong>deque双端队列</strong>
 <strong>使用条件</strong>：<strong>状态只有两种，保证单调性</strong></p>
 <p><strong>例题</strong>:<a class="link" href="https://www.luogu.com.cn/problem/P4554"  target="_blank" rel="noopener"
-    >P4554 小明的游戏</a>
-<strong>题目分析</strong>:根据题目，<strong>想要花费最少就要先走完所有费用0的格子</strong>,<strong>然后再走费用为1的格子</strong>，我们把费用0和费用1的格子视为两种<strong>状态</strong>，那么就符合了<strong>队列的两段性</strong>，但是如果只是普通队列，我们没办法使<strong>费用0的格子先全部走完，再走费用1的格子</strong>，这时我们可以用<strong>双端队列，将费用0的格子从队头入队，费用1的格子从对尾入队</strong>，这样就可以使<strong>费用0的格子全部走完再走费用1</strong></p>
+    >P4554 小明的游戏</a></p>
+<p><strong>题目分析</strong>:</p>
+<p>根据题目，<strong>想要花费最少就要先走完所有费用0的格子</strong>,<strong>然后再走费用为1的格子</strong>，我们把费用0和费用1的格子视为两种<strong>状态</strong>，那么就符合了<strong>队列的两段性</strong>，但是如果只是普通队列，我们没办法使<strong>费用0的格子先全部走完，再走费用1的格子</strong>，这时我们可以用<strong>双端队列，将费用0的格子从队头入队，费用1的格子从对尾入队</strong>，这样就可以使<strong>费用0的格子全部走完再走费用1</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2758,10 +2768,10 @@
 <li><strong>图，迷宫，最短路</strong></li>
 </ol>
 <h2 id="额外知识补充">额外知识补充
-</h2><p><strong>曼哈顿距离</strong>:
-曼哈顿距离（Manhattan Distance）是由十九世纪的赫尔曼·闵可夫斯基所创词汇 ，是种使用在几何度量空间的几何学用语，用以<strong>标明两个点在标准坐标系上的绝对轴距总和</strong>。
-<strong>曼哈顿距离——两点在南北方向上的距离加上在东西方向上的距离，即d(i,j)=|xi-xj|+|yi-yj|。（横平竖直的距离）</strong>
-<strong>还有一种常用距离是欧几里得距离</strong>，<strong>欧几里得距离——两点在欧几里得空间中的距离，即d(i,j)=sqrt((xi-xj)^2+(yi-yj)^2)。（斜着的距离）</strong></p>
+</h2><p><strong>曼哈顿距离</strong>:</p>
+<p>曼哈顿距离（Manhattan Distance）是由十九世纪的赫尔曼·闵可夫斯基所创词汇 ，是种使用在几何度量空间的几何学用语，用以<strong>标明两个点在标准坐标系上的绝对轴距总和</strong>。</p>
+<p><strong>曼哈顿距离——两点在南北方向上的距离加上在东西方向上的距离，即d(i,j)=|xi-xj|+|yi-yj|。（横平竖直的距离）</strong></p>
+<p><strong>还有一种常用距离是欧几里得距离</strong>，<strong>欧几里得距离——两点在欧几里得空间中的距离，即d(i,j)=sqrt((xi-xj)^2+(yi-yj)^2)。（斜着的距离）</strong></p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -2836,6 +2846,30 @@
     <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/zhenhong.8cb693e1a147e385ea75c7a7f5af28d1_hu7400501560867157250.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 算法学习"
+                        
+                        data-hash="md5-jLaT4aFH44Xqdcen9a8o0Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">算法学习</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="has-image">
