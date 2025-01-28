@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>baozi</copyright>
-        <lastBuildDate>Sun, 15 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://baozi.github.io/categories/%E6%90%9C%E7%B4%A2/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 28 Jan 2025 17:07:49 +0800</lastBuildDate><atom:link href="https://baozi.github.io/categories/%E6%90%9C%E7%B4%A2/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>算法学习-搜索</title>
         <link>https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E6%90%9C%E7%B4%A2/</link>
         <pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate>
@@ -19,7 +19,7 @@
 &lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E6%90%9C%E7%B4%A2/dfs-and-bfs-distinction.jpg&#34;
 	width=&#34;1910&#34;
 	height=&#34;925&#34;
-	srcset=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E6%90%9C%E7%B4%A2/dfs-and-bfs-distinction_hu17371022172523025910.jpg 480w, https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E6%90%9C%E7%B4%A2/dfs-and-bfs-distinction_hu14176111495717342278.jpg 1024w&#34;
+	srcset=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E6%90%9C%E7%B4%A2/dfs-and-bfs-distinction_hu_34cfa7683834f78c.jpg 480w, https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E6%90%9C%E7%B4%A2/dfs-and-bfs-distinction_hu_d4aa9152b57a34e1.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;深度优先搜索与广度优先搜索的特性&#34;
@@ -30,7 +30,8 @@
 		data-flex-basis=&#34;495px&#34;
 	
 &gt;
-学习视频链接:https://www.bilibili.com/video/BV1N24y1W7q4/&lt;/p&gt;
+学习视频链接:&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1N24y1W7q4/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DFS正确入门方式 | DFS + 递归与递推习题课(上) | 一节课教你爆搜!&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;深度优先搜索&#34;&gt;深度优先搜索
 &lt;/h2&gt;&lt;h3 id=&#34;深度优先搜索的特性&#34;&gt;深度优先搜索的特性：

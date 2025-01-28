@@ -7,12 +7,92 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>baozi</copyright>
-        <lastBuildDate>Sat, 11 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://baozi.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 28 Jan 2025 17:07:49 +0800</lastBuildDate><atom:link href="https://baozi.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Algorithm</title>
         <link>https://baozi.github.io/categories/algorithm/</link>
-        <pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate>
+        <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
         
         <guid>https://baozi.github.io/categories/algorithm/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>质因数分解</title>
+        <link>https://baozi.github.io/categories/%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/</link>
+        <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://baozi.github.io/categories/%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>最小生成树</title>
+        <link>https://baozi.github.io/categories/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</link>
+        <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://baozi.github.io/categories/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>并查集</title>
+        <link>https://baozi.github.io/categories/%E5%B9%B6%E6%9F%A5%E9%9B%86/</link>
+        <pubDate>Thu, 23 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://baozi.github.io/categories/%E5%B9%B6%E6%9F%A5%E9%9B%86/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>图的存储</title>
+        <link>https://baozi.github.io/categories/%E5%9B%BE%E7%9A%84%E5%AD%98%E5%82%A8/</link>
+        <pubDate>Thu, 23 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://baozi.github.io/categories/%E5%9B%BE%E7%9A%84%E5%AD%98%E5%82%A8/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>最短路</title>
+        <link>https://baozi.github.io/categories/%E6%9C%80%E7%9F%AD%E8%B7%AF/</link>
+        <pubDate>Thu, 23 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://baozi.github.io/categories/%E6%9C%80%E7%9F%AD%E8%B7%AF/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>离散化</title>
+        <link>https://baozi.github.io/categories/%E7%A6%BB%E6%95%A3%E5%8C%96/</link>
+        <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://baozi.github.io/categories/%E7%A6%BB%E6%95%A3%E5%8C%96/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>树状数组</title>
+        <link>https://baozi.github.io/categories/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/</link>
+        <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://baozi.github.io/categories/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>单调队列</title>
+        <link>https://baozi.github.io/categories/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/</link>
+        <pubDate>Thu, 16 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://baozi.github.io/categories/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>单调栈</title>
+        <link>https://baozi.github.io/categories/%E5%8D%95%E8%B0%83%E6%A0%88/</link>
+        <pubDate>Thu, 16 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://baozi.github.io/categories/%E5%8D%95%E8%B0%83%E6%A0%88/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>STL</title>
+        <link>https://baozi.github.io/categories/stl/</link>
+        <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://baozi.github.io/categories/stl/</guid>
         <description></description>
         </item>
         <item>
@@ -77,46 +157,6 @@
         <pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate>
         
         <guid>https://baozi.github.io/categories/%E6%90%9C%E7%B4%A2/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Test</title>
-        <link>https://baozi.github.io/categories/test/</link>
-        <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
-        
-        <guid>https://baozi.github.io/categories/test/</guid>
-        <description>&lt;img src="https://baozi.github.io/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
-        </item>
-        <item>
-        <title>测试</title>
-        <link>https://baozi.github.io/categories/%E6%B5%8B%E8%AF%95/</link>
-        <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
-        
-        <guid>https://baozi.github.io/categories/%E6%B5%8B%E8%AF%95/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Syntax</title>
-        <link>https://baozi.github.io/categories/syntax/</link>
-        <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://baozi.github.io/categories/syntax/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Themes</title>
-        <link>https://baozi.github.io/categories/themes/</link>
-        <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://baozi.github.io/categories/themes/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Test With Whitespaces</title>
-        <link>https://baozi.github.io/categories/test-with-whitespaces/</link>
-        <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://baozi.github.io/categories/test-with-whitespaces/</guid>
         <description></description>
         </item>
         
