@@ -1564,11 +1564,25 @@ $$\sum_{i=1}^{r}a_i=\sum_{i=1}^{r}  (r+1)d_i-\sum_{i=1}^{r}id_i$$<p>那么我们
 
 <div id="particles-js"></div>
 
-<script src="https://baoziandbluemouse.github.io/background/particles.min.js"></script>
 <script>
-  particlesJS.load('particles-js', 'https://baoziandbluemouse.github.io/background/particlesjs-config.json', function() {
-    console.log('particles.js loaded - callback');
-  });
+  
+  const baseUrl = window.location.origin;
+  
+  const jsPath = '/background/particles.min.js';
+  const configPath = '/background/particlesjs-config.json';
+
+  
+  const script = document.createElement('script');
+  script.src = baseUrl + jsPath;
+  
+  document.head.appendChild(script);
+
+  
+  script.onload = function() {
+    particlesJS.load('particles-js', baseUrl + configPath, function() {
+      console.log('particles.js loaded - callback');
+    });
+  };
 </script>
 
 <style>
@@ -1580,8 +1594,6 @@ $$\sum_{i=1}^{r}a_i=\sum_{i=1}^{r}  (r+1)d_i-\sum_{i=1}^{r}id_i$$<p>那么我们
     z-index: -1;
   }
 </style>
-
-
 
 
 
