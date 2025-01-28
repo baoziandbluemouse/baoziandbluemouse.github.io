@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>二分 on 包子-baozi</title>
-        <link>https://baozi.github.io/categories/%E4%BA%8C%E5%88%86/</link>
+        <link>https://baoziandbluemouse.github.io/categories/%E4%BA%8C%E5%88%86/</link>
         <description>Recent content in 二分 on 包子-baozi</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>baozi</copyright>
-        <lastBuildDate>Tue, 28 Jan 2025 17:07:49 +0800</lastBuildDate><atom:link href="https://baozi.github.io/categories/%E4%BA%8C%E5%88%86/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 28 Jan 2025 17:07:49 +0800</lastBuildDate><atom:link href="https://baoziandbluemouse.github.io/categories/%E4%BA%8C%E5%88%86/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>位运算，排序，双指针，二分</title>
-        <link>https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/</link>
+        <link>https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/</link>
         <pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/</guid>
-        <description>&lt;img src="https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/zhenhong.jpg" alt="Featured image of post 位运算，排序，双指针，二分" /&gt;&lt;h1 id=&#34;前言&#34;&gt;前言
+        <guid>https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/</guid>
+        <description>&lt;img src="https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/zhenhong.jpg" alt="Featured image of post 位运算，排序，双指针，二分" /&gt;&lt;h1 id=&#34;前言&#34;&gt;前言
 &lt;/h1&gt;&lt;p&gt;&lt;strong&gt;学习网站&lt;/strong&gt;:&lt;a class=&#34;link&#34; href=&#34;https://www.starrycoding.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Starrycoding&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;本篇文章涉及位运算，排序，双指针，二分.&lt;/p&gt;
 &lt;h2 id=&#34;位运算&#34;&gt;位运算
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/weiyunsuan1.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/weiyunsuan1.png&#34;
 	width=&#34;1560&#34;
 	height=&#34;739&#34;
-	srcset=&#34;https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/weiyunsuan1_hu_be8df82a94688d41.png 480w, https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/weiyunsuan1_hu_6dc8655db0d029c7.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/weiyunsuan1_hu_be8df82a94688d41.png 480w, https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/weiyunsuan1_hu_6dc8655db0d029c7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -33,10 +33,10 @@
 &lt;p&gt;如图，位运算有这几种操作,比较常出现的是&lt;strong&gt;异或&lt;/strong&gt;和&lt;strong&gt;与&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;与&lt;/strong&gt;的应用：作为掩码来使用。
 如000111 &amp;amp; 000001= 000001，这样就可以取出最后一位。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/yu1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/yu1.png&#34;
 	width=&#34;948&#34;
 	height=&#34;490&#34;
-	srcset=&#34;https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/yu1_hu_1369c91c110dad27.png 480w, https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/yu1_hu_177edbcd4115e293.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/yu1_hu_1369c91c110dad27.png 480w, https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/yu1_hu_177edbcd4115e293.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -46,10 +46,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;异或&lt;/strong&gt;的性质:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/yihuo.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/yihuo.png&#34;
 	width=&#34;1783&#34;
 	height=&#34;750&#34;
-	srcset=&#34;https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/yihuo_hu_5e9ddb27a2bfe468.png 480w, https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/yihuo_hu_fb4837ab7f259eab.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/yihuo_hu_5e9ddb27a2bfe468.png 480w, https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/yihuo_hu_fb4837ab7f259eab.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -220,10 +220,10 @@ MEX值是指：&lt;strong&gt;最小的不存在于该数组之中的非负整数
 &lt;p&gt;1.y=0时，那么就说明&lt;strong&gt;x=b&lt;/strong&gt;，此时数组长度就为&lt;strong&gt;a&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;2.y=a时，因为我们不能有a，所以要把a拆成两个数（不难发现，一个数字&lt;strong&gt;a必定能拆成两个数的异或&lt;/strong&gt;）,所以此时数组长度就为&lt;strong&gt;a+2&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;3.y!=a且y!=0时，此时数组长度就为&lt;strong&gt;a+1&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/yihuo3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/yihuo3.png&#34;
 	width=&#34;705&#34;
 	height=&#34;717&#34;
-	srcset=&#34;https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/yihuo3_hu_e22897309d968e7b.png 480w, https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/yihuo3_hu_57c054fda00adaa4.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/yihuo3_hu_e22897309d968e7b.png 480w, https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/yihuo3_hu_57c054fda00adaa4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -385,10 +385,10 @@ MEX值是指：&lt;strong&gt;最小的不存在于该数组之中的非负整数
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/unique1.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/unique1.png&#34;
 	width=&#34;1187&#34;
 	height=&#34;829&#34;
-	srcset=&#34;https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/unique1_hu_7d16d2cfe2171325.png 480w, https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/unique1_hu_a99aa749812b803c.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/unique1_hu_7d16d2cfe2171325.png 480w, https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/unique1_hu_a99aa749812b803c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -549,10 +549,10 @@ MEX值是指：&lt;strong&gt;最小的不存在于该数组之中的非负整数
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;双指针&#34;&gt;双指针
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/shuangzhizhen.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/shuangzhizhen.png&#34;
 	width=&#34;986&#34;
 	height=&#34;811&#34;
-	srcset=&#34;https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/shuangzhizhen_hu_71247f7e5fb1c5c.png 480w, https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/shuangzhizhen_hu_b91032ad74990107.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/shuangzhizhen_hu_71247f7e5fb1c5c.png 480w, https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/shuangzhizhen_hu_b91032ad74990107.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -566,10 +566,10 @@ MEX值是指：&lt;strong&gt;最小的不存在于该数组之中的非负整数
     &gt;P36 最长连续不重复子序列&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;分析：
 根据题目，我们要找出数组中&lt;strong&gt;最长的无重复的子序列&lt;/strong&gt;,用双指针来实现&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/shuangzhizhen2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/shuangzhizhen2.png&#34;
 	width=&#34;846&#34;
 	height=&#34;688&#34;
-	srcset=&#34;https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/shuangzhizhen2_hu_361f0ac85d86ca03.png 480w, https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/shuangzhizhen2_hu_11c5399b739cd936.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/shuangzhizhen2_hu_361f0ac85d86ca03.png 480w, https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/shuangzhizhen2_hu_11c5399b739cd936.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -808,10 +808,10 @@ MEX值是指：&lt;strong&gt;最小的不存在于该数组之中的非负整数
 &lt;strong&gt;最近距离&lt;/strong&gt;就是指&lt;strong&gt;相邻的两头牛的距离&lt;/strong&gt;，这个距离越大越好&lt;/p&gt;
 &lt;p&gt;也就是说我们假设所有相邻距离集合为A，&lt;strong&gt;最大的相邻距离为max&lt;/strong&gt;,那么A必须满足&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;任选A中一个元素&lt;/strong&gt;，都&lt;strong&gt;大于等于max&lt;/strong&gt;,则此max为&lt;strong&gt;最小最大值&lt;/strong&gt; (所有种的A中的&lt;strong&gt;最小元素&lt;/strong&gt;的集合中的&lt;strong&gt;最大值&lt;/strong&gt;)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/niu1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/niu1.png&#34;
 	width=&#34;716&#34;
 	height=&#34;713&#34;
-	srcset=&#34;https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/niu1_hu_b8122d6a7a8a4e1f.png 480w, https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/niu1_hu_5a52b4702ae15438.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/niu1_hu_b8122d6a7a8a4e1f.png 480w, https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/niu1_hu_5a52b4702ae15438.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -821,10 +821,10 @@ MEX值是指：&lt;strong&gt;最小的不存在于该数组之中的非负整数
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;对样例分析，我们可以得出二分&lt;strong&gt;分界线&lt;/strong&gt;：给定最小相邻距离，能否放下要求放的牛数量&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/niu2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/niu2.png&#34;
 	width=&#34;742&#34;
 	height=&#34;752&#34;
-	srcset=&#34;https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/niu2_hu_46136226b0bbadaa.png 480w, https://baozi.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/niu2_hu_6c930cfb008b7105.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/niu2_hu_46136226b0bbadaa.png 480w, https://baoziandbluemouse.github.io/p/%E4%BD%8D%E8%BF%90%E7%AE%97%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88%E4%BA%8C%E5%88%86/niu2_hu_6c930cfb008b7105.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;min_dis与max_c的函数&#34;

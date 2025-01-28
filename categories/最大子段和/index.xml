@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>最大子段和 on 包子-baozi</title>
-        <link>https://baozi.github.io/categories/%E6%9C%80%E5%A4%A7%E5%AD%90%E6%AE%B5%E5%92%8C/</link>
+        <link>https://baoziandbluemouse.github.io/categories/%E6%9C%80%E5%A4%A7%E5%AD%90%E6%AE%B5%E5%92%8C/</link>
         <description>Recent content in 最大子段和 on 包子-baozi</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>baozi</copyright>
-        <lastBuildDate>Tue, 28 Jan 2025 17:07:49 +0800</lastBuildDate><atom:link href="https://baozi.github.io/categories/%E6%9C%80%E5%A4%A7%E5%AD%90%E6%AE%B5%E5%92%8C/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 28 Jan 2025 17:07:49 +0800</lastBuildDate><atom:link href="https://baoziandbluemouse.github.io/categories/%E6%9C%80%E5%A4%A7%E5%AD%90%E6%AE%B5%E5%92%8C/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>算法学习-前缀和与差分</title>
-        <link>https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/</link>
+        <link>https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/</link>
         <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/</guid>
-        <description>&lt;img src="https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/mu.jpg" alt="Featured image of post 算法学习-前缀和与差分" /&gt;&lt;h1 id=&#34;前言&#34;&gt;前言
+        <guid>https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/</guid>
+        <description>&lt;img src="https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/mu.jpg" alt="Featured image of post 算法学习-前缀和与差分" /&gt;&lt;h1 id=&#34;前言&#34;&gt;前言
 &lt;/h1&gt;&lt;p&gt;&lt;strong&gt;学习网站&lt;/strong&gt;:&lt;a class=&#34;link&#34; href=&#34;https://www.starrycoding.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Starrycoding&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;前缀和是一种重要的预处理，能大大降低查询的时间复杂度，而差分则是一种和前缀和相对的策略。&lt;/p&gt;
@@ -21,10 +21,10 @@
 &lt;/h2&gt;&lt;p&gt;前缀和预处理可以帮助我们在$O(1)$的时间复杂度内求出$a$数组中任意区间$[l,r]$的和，即$a_l+a_{l+1}+a_{l+2}+&amp;hellip;+a_r$，而不需要每次都遍历一遍区间，这&lt;strong&gt;大大提高了查询的效率&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;前缀和通常用数组来实现,假设我们有一个数组a，那么我们可以用数组b来表示a的前缀和，即&lt;/p&gt;
 $$b_1=a_1,b_2=a_1+a_2,b_3=a_1+a_2+a_3....$$&lt;p&gt;如此循环，直到加到$b_n$，那么$b_n$就是&lt;strong&gt;a的所有元素之和&lt;/strong&gt;
-&lt;img src=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix1.png&#34;
+&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix1.png&#34;
 	width=&#34;1008&#34;
 	height=&#34;571&#34;
-	srcset=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix1_hu_fa899ee91fa2a4f1.png 480w, https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix1_hu_ffcf3e26d22a2589.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix1_hu_fa899ee91fa2a4f1.png 480w, https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix1_hu_ffcf3e26d22a2589.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -33,10 +33,10 @@ $$b_1=a_1,b_2=a_1+a_2,b_3=a_1+a_2+a_3....$$&lt;p&gt;如此循环，直到加到$
 		data-flex-basis=&#34;423px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix2.png&#34;
 	width=&#34;1203&#34;
 	height=&#34;488&#34;
-	srcset=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix2_hu_873f826673d89d96.png 480w, https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix2_hu_6f227a7accb608a1.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix2_hu_873f826673d89d96.png 480w, https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix2_hu_6f227a7accb608a1.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -126,10 +126,10 @@ $$b_1=a_1,b_2=a_1+a_2,b_3=a_1+a_2+a_3....$$&lt;p&gt;如此循环，直到加到$
 二维前缀和思想和一维的一致，只不过我们需要二维数组来实现，并且初始化也会有所不同&lt;/p&gt;
 &lt;p&gt;二维前缀和题目:&lt;a class=&#34;link&#34; href=&#34;https://www.starrycoding.com/problem/15&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;P15 【模板】二维前缀和&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix3.png&#34;
 	width=&#34;1052&#34;
 	height=&#34;626&#34;
-	srcset=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix3_hu_dd39224ad1ae0eba.png 480w, https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix3_hu_66bb79cfbdea2b85.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix3_hu_dd39224ad1ae0eba.png 480w, https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix3_hu_66bb79cfbdea2b85.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -140,10 +140,10 @@ $$b_1=a_1,b_2=a_1+a_2,b_3=a_1+a_2+a_3....$$&lt;p&gt;如此循环，直到加到$
 &gt;&lt;/p&gt;
 &lt;p&gt;如图即为二维前缀和的初始化（少加了$a_{3,3}$），我们假设一个二维数组a，我们用二维数组b来表示a的二维前缀和，即&lt;/p&gt;
 $$b_{3,3}=b_{2,3}+b_{3,2}-b_{2,2}+a_{3,3}$$&lt;p&gt;这涉及了一点&lt;strong&gt;递归（递推）的思想&lt;/strong&gt;（可以自己从1，1开始推一下）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix4.png&#34;
 	width=&#34;851&#34;
 	height=&#34;672&#34;
-	srcset=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix4_hu_730af442a51c1a5a.png 480w, https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix4_hu_22debdd9a673ee16.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix4_hu_730af442a51c1a5a.png 480w, https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix4_hu_22debdd9a673ee16.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;最终得出的公式&#34;
@@ -154,10 +154,10 @@ $$b_{3,3}=b_{2,3}+b_{3,2}-b_{2,2}+a_{3,3}$$&lt;p&gt;这涉及了一点&lt;strong
 		data-flex-basis=&#34;303px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix5.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix5.png&#34;
 	width=&#34;864&#34;
 	height=&#34;444&#34;
-	srcset=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix5_hu_51db079ded17a5c0.png 480w, https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix5_hu_af17cadedccc3974.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix5_hu_51db079ded17a5c0.png 480w, https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/prefix5_hu_af17cadedccc3974.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;区间和的计算&#34;
@@ -260,10 +260,10 @@ $$b_1+b_2+...b_i=a_1+a_2-a_1+...a_i-a_{i-1}$$&lt;p&gt;
 即&lt;/p&gt;
 $$b_1+b_2+...b_i=a_i$$&lt;p&gt;我们由此得出差分的性质就是可以通过&lt;strong&gt;差分的前缀和&lt;/strong&gt;来得到原数组的其中&lt;strong&gt;一个元素&lt;/strong&gt;。
 基于差分的这个性质，我们就可以用差分来实现&lt;strong&gt;静态的区间修改&lt;/strong&gt;
-&lt;img src=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ1.png&#34;
+&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ1.png&#34;
 	width=&#34;1393&#34;
 	height=&#34;861&#34;
-	srcset=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ1_hu_56fc17988530a555.png 480w, https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ1_hu_31f554338f563272.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ1_hu_56fc17988530a555.png 480w, https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ1_hu_31f554338f563272.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -272,10 +272,10 @@ $$b_1+b_2+...b_i=a_i$$&lt;p&gt;我们由此得出差分的性质就是可以通�
 		data-flex-basis=&#34;388px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ2.png&#34;
 	width=&#34;798&#34;
 	height=&#34;763&#34;
-	srcset=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ2_hu_357b48b760f34ffd.png 480w, https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ2_hu_877d608f9bdf347.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ2_hu_357b48b760f34ffd.png 480w, https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ2_hu_877d608f9bdf347.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -286,10 +286,10 @@ $$b_1+b_2+...b_i=a_i$$&lt;p&gt;我们由此得出差分的性质就是可以通�
 &gt;&lt;/p&gt;
 &lt;p&gt;如果我们给差分数组d中的$d_2$加上一个数$x$,那么&lt;strong&gt;用前缀和还原时&lt;/strong&gt;，就会发现&lt;strong&gt;从$a_2$开始所有的数都加上了$x$&lt;/strong&gt;
 那假如我们要给$[2,3]$区间加上一个数$x$呢？&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ3.png&#34;
 	width=&#34;1002&#34;
 	height=&#34;807&#34;
-	srcset=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ3_hu_d5258090adaf6ec9.png 480w, https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ3_hu_901f5e43554f0298.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ3_hu_d5258090adaf6ec9.png 480w, https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ3_hu_901f5e43554f0298.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -300,10 +300,10 @@ $$b_1+b_2+...b_i=a_i$$&lt;p&gt;我们由此得出差分的性质就是可以通�
 &gt;&lt;/p&gt;
 $$d_l+=x,d_{r+1}-=x$$&lt;p&gt;此时，我们再回过头看开头时我们是如何&lt;strong&gt;表示差分的&lt;/strong&gt;,就可以发现其实他们也&lt;strong&gt;遵循了这个修改区间的公式&lt;/strong&gt;,只不过他们的区间很小,是$[1,2]$,$[2,3]$,$[3,4]$&amp;hellip;以此类推下去。
 &lt;strong&gt;注&lt;/strong&gt;:一维差分数组可以直接用$d_i=a_i-a_{i-1}$来表示，而二维差分数组我们一般用上面的&lt;strong&gt;公式&lt;/strong&gt;来&lt;strong&gt;初始化&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ4.png&#34;
 	width=&#34;577&#34;
 	height=&#34;490&#34;
-	srcset=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ4_hu_6715c73f9efc8264.png 480w, https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ4_hu_119003c9a77391f6.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ4_hu_6715c73f9efc8264.png 480w, https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ4_hu_119003c9a77391f6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -426,10 +426,10 @@ $$d_l+=x,d_{r+1}-=x$$&lt;p&gt;此时，我们再回过头看开头时我们是�
 二维差分的特点就如前面所说，我们&lt;strong&gt;初始化&lt;/strong&gt;需要使用&lt;strong&gt;公式&lt;/strong&gt;才会更有助于理解&lt;/p&gt;
 &lt;p&gt;二维差分题目:&lt;a class=&#34;link&#34; href=&#34;https://www.starrycoding.com/problem/50&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;P50 【模板】二维差分&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ5.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ5.png&#34;
 	width=&#34;823&#34;
 	height=&#34;695&#34;
-	srcset=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ5_hu_94bdcf33a250961a.png 480w, https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ5_hu_89140a2301d2b272.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ5_hu_94bdcf33a250961a.png 480w, https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ5_hu_89140a2301d2b272.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -571,10 +571,10 @@ $$d_{x_1,y_1}+=x,d_{x_2+1,y_1}-=x,d_{x_1,y_2+1}-=x,d_{x_2+1,y_2+1}+=x$$&lt;p&gt;
 &lt;p&gt;题目&lt;a class=&#34;link&#34; href=&#34;https://www.starrycoding.com/problem/35&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;p35.鼠鼠我鸭&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;分析：题目将重量分为两种类型，一种可以算进答案，一种不行，并且，我们可以使用一次操作来&lt;strong&gt;变更一段区间$[l,r]$的类型&lt;/strong&gt;，我们可以用一个&lt;strong&gt;bool数组&lt;/strong&gt;来记录，0代表不行，1代表可以,既然要求最大值，那么我们可以先把&lt;strong&gt;未改变时的答案&lt;/strong&gt;求出来,接着再求&lt;strong&gt;更改时的增加量&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/good1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/good1.png&#34;
 	width=&#34;850&#34;
 	height=&#34;452&#34;
-	srcset=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/good1_hu_bd253dbbfc7c973b.png 480w, https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/good1_hu_1941b47061a4c7e0.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/good1_hu_bd253dbbfc7c973b.png 480w, https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/good1_hu_1941b47061a4c7e0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -590,10 +590,10 @@ $$d_{x_1,y_1}+=x,d_{x_2+1,y_1}-=x,d_{x_1,y_2+1}-=x,d_{x_2+1,y_2+1}+=x$$&lt;p&gt;
 &lt;ol&gt;
 &lt;li&gt;前缀和求法&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/good2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/good2.png&#34;
 	width=&#34;1154&#34;
 	height=&#34;831&#34;
-	srcset=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/good2_hu_bbfa920d0679e49f.png 480w, https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/good2_hu_52320ebceb21cb3d.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/good2_hu_bbfa920d0679e49f.png 480w, https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/good2_hu_52320ebceb21cb3d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -638,10 +638,10 @@ $$d_{x_1,y_1}+=x,d_{x_2+1,y_1}-=x,d_{x_1,y_2+1}-=x,d_{x_2+1,y_2+1}+=x$$&lt;p&gt;
 &lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;贪心求法&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/good3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/good3.png&#34;
 	width=&#34;1226&#34;
 	height=&#34;840&#34;
-	srcset=&#34;https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/good3_hu_89fb3c62800fcc4b.png 480w, https://baozi.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/good3_hu_10473831b973d92a.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/good3_hu_89fb3c62800fcc4b.png 480w, https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/good3_hu_10473831b973d92a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	

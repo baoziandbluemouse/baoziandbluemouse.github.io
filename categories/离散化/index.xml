@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>离散化 on 包子-baozi</title>
-        <link>https://baozi.github.io/categories/%E7%A6%BB%E6%95%A3%E5%8C%96/</link>
+        <link>https://baoziandbluemouse.github.io/categories/%E7%A6%BB%E6%95%A3%E5%8C%96/</link>
         <description>Recent content in 离散化 on 包子-baozi</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>baozi</copyright>
-        <lastBuildDate>Tue, 28 Jan 2025 17:07:49 +0800</lastBuildDate><atom:link href="https://baozi.github.io/categories/%E7%A6%BB%E6%95%A3%E5%8C%96/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 28 Jan 2025 17:07:49 +0800</lastBuildDate><atom:link href="https://baoziandbluemouse.github.io/categories/%E7%A6%BB%E6%95%A3%E5%8C%96/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>离散化，树状数组</title>
-        <link>https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/</link>
+        <link>https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/</link>
         <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/</guid>
-        <description>&lt;img src="https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/neuro.png" alt="Featured image of post 离散化，树状数组" /&gt;&lt;h1 id=&#34;前言&#34;&gt;前言
+        <guid>https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/</guid>
+        <description>&lt;img src="https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/neuro.png" alt="Featured image of post 离散化，树状数组" /&gt;&lt;h1 id=&#34;前言&#34;&gt;前言
 &lt;/h1&gt;&lt;p&gt;&lt;strong&gt;学习网站&lt;/strong&gt;:&lt;a class=&#34;link&#34; href=&#34;https://www.starrycoding.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Starrycoding&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;离散化&#34;&gt;离散化
@@ -33,10 +33,10 @@
 &lt;p&gt;根据题目，数组的下标范围是$[1,10^9]$，这么大的范围如果我们直接用数组来存储会爆内存，根本连暴力都用不了。&lt;/p&gt;
 &lt;p&gt;但是看到数据，个数只有$10^5$个，那么如果把&lt;strong&gt;下标作为值存储在数组中&lt;/strong&gt;呢？&lt;/p&gt;
 &lt;p&gt;我们把这个数组叫做&lt;strong&gt;X&lt;/strong&gt;,这些&lt;strong&gt;下标&lt;/strong&gt;叫做&lt;strong&gt;相关点&lt;/strong&gt;,X的&lt;strong&gt;下标&lt;/strong&gt;叫做&lt;strong&gt;排名&lt;/strong&gt;。接着&lt;strong&gt;我们再开一个数组Y&lt;/strong&gt;，Y的下标和X的下标&lt;strong&gt;一一对应&lt;/strong&gt;，而&lt;strong&gt;Y的值&lt;/strong&gt;存储的是&lt;strong&gt;原数组的值&lt;/strong&gt;,也可以用来加减了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lisanhua1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lisanhua1.png&#34;
 	width=&#34;1097&#34;
 	height=&#34;617&#34;
-	srcset=&#34;https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lisanhua1_hu_870bf270dcb660a9.png 480w, https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lisanhua1_hu_fd5c58aa7923f65f.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lisanhua1_hu_870bf270dcb660a9.png 480w, https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lisanhua1_hu_fd5c58aa7923f65f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -48,10 +48,10 @@
 &lt;p&gt;这样通过两个数组，我们就可以通过&lt;strong&gt;排名&lt;/strong&gt;来&lt;strong&gt;查询&lt;/strong&gt;原数组的值了。&lt;/p&gt;
 &lt;p&gt;总结得到这样的&lt;strong&gt;映射关系&lt;/strong&gt;:&lt;strong&gt;排名&amp;ndash;&amp;gt;原数组的下标&amp;ndash;&amp;gt;原数组的值&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;所以我们可以将数组的&lt;strong&gt;下标&lt;/strong&gt;进行离散化，然后用数组来存储。那么我们就有办法&lt;strong&gt;存储相关点&lt;/strong&gt;了，也可以再用二分得到&lt;strong&gt;相关点&lt;/strong&gt;的&lt;strong&gt;排名&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lisanhua2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lisanhua2.png&#34;
 	width=&#34;968&#34;
 	height=&#34;510&#34;
-	srcset=&#34;https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lisanhua2_hu_980f1cda2878c1e2.png 480w, https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lisanhua2_hu_cacb70d1be302a1c.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lisanhua2_hu_980f1cda2878c1e2.png 480w, https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lisanhua2_hu_cacb70d1be302a1c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -61,10 +61,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;这里要注意，既然离散化的是&lt;strong&gt;下标&lt;/strong&gt;，那么q次询问中的&lt;strong&gt;l和r&lt;/strong&gt;也要记录进X中.这样才能得到&lt;strong&gt;排名&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lisanhua3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lisanhua3.png&#34;
 	width=&#34;971&#34;
 	height=&#34;696&#34;
-	srcset=&#34;https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lisanhua3_hu_941bfe24b31f27cd.png 480w, https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lisanhua3_hu_a59259f71643bfa7.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lisanhua3_hu_941bfe24b31f27cd.png 480w, https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lisanhua3_hu_a59259f71643bfa7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -218,10 +218,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;树状数组&#34;&gt;树状数组
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr1.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr1.png&#34;
 	width=&#34;418&#34;
 	height=&#34;199&#34;
-	srcset=&#34;https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr1_hu_83f69e47f6c7b46e.png 480w, https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr1_hu_490de572351b78.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr1_hu_83f69e47f6c7b46e.png 480w, https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr1_hu_490de572351b78.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -233,10 +233,10 @@
 &lt;p&gt;树状数组是一种支持&lt;strong&gt;单点修改&lt;/strong&gt;,&lt;strong&gt;区间查询&lt;/strong&gt;和&lt;strong&gt;区间修改&lt;/strong&gt;（区间修改运用了&lt;strong&gt;差分&lt;/strong&gt;）的，代码量小的数据结构。树状数组简单来说，算是一种&lt;strong&gt;高级前缀和&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;假如有个数组$a$，我们想得到这个数组的前缀和很简单，只需要用一个数组$sum$来存储前缀和就可以了。但是，如果我们要修改数组$a$中的一个元素，然后&lt;strong&gt;马上查询那个区间的和&lt;/strong&gt;，那么我们$sum$就要重新进行前缀和再输出，这样的话，时间复杂度就会很高。&lt;/p&gt;
 &lt;p&gt;想解决这种在线的单点修改，就得使用树状数组。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr2.png&#34;
 	width=&#34;876&#34;
 	height=&#34;482&#34;
-	srcset=&#34;https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr2_hu_7dd892f4ef910f75.png 480w, https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr2_hu_7dd5cb3309cb9931.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr2_hu_7dd892f4ef910f75.png 480w, https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr2_hu_7dd5cb3309cb9931.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -256,10 +256,10 @@
 &lt;p&gt;那么我们如何进行单点修改呢?&lt;/p&gt;
 &lt;p&gt;可以看出，如果我们对$a_3$进行修改，那么$t_3,t_4,t_8$都要进行修改。这样的影响是有规律的。&lt;/p&gt;
 &lt;p&gt;我们可以发现,&lt;strong&gt;3+lowbit(3)=4,4+lowbit(4)=8&lt;/strong&gt;，所以我们可以用一个循环来实现单点修改。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr4.png&#34;
 	width=&#34;533&#34;
 	height=&#34;186&#34;
-	srcset=&#34;https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr4_hu_89c824d788b943b7.png 480w, https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr4_hu_bc15cc60e580674d.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr4_hu_89c824d788b943b7.png 480w, https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr4_hu_bc15cc60e580674d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -272,10 +272,10 @@
 &lt;p&gt;虽然$t_8$把全部元素包括了，但假如我们要的和是部分的话该怎么办呢？例如，我们要的是$a_1$到$a_7$的和。观察一下，可以发现$a_1$到$a_7$可以分为$t_4$+$t_6$+$t_7$。&lt;/p&gt;
 &lt;p&gt;这种无缝连接的块也是有规律的。&lt;/p&gt;
 &lt;p&gt;我们可以发现，&lt;strong&gt;7-lowbit(7)=6,6-lowbit(6)=4&lt;/strong&gt;，所以我们可以用一个循环来实现区间查询。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr5.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr5.png&#34;
 	width=&#34;249&#34;
 	height=&#34;286&#34;
-	srcset=&#34;https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr5_hu_f95147df6001c42c.png 480w, https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr5_hu_839a2a343272ef9a.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr5_hu_f95147df6001c42c.png 480w, https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr5_hu_839a2a343272ef9a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -286,10 +286,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;最后，如何初始化树状数组呢?&lt;/p&gt;
 &lt;p&gt;我们可以把$t$数组初始化为0，然后用单点修改来实现初始化，就可以了。（和差分的思想有点类似）。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr3.png&#34;
 	width=&#34;836&#34;
 	height=&#34;678&#34;
-	srcset=&#34;https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr3_hu_453e37021f3e8df5.png 480w, https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr3_hu_7177e6c373a73360.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr3_hu_453e37021f3e8df5.png 480w, https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr3_hu_7177e6c373a73360.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -447,10 +447,10 @@
 &lt;p&gt;如果是区间修改，&lt;strong&gt;离线&lt;/strong&gt;的话我们可以用差分来实现，时间复杂度比树状数组更加优秀。&lt;/p&gt;
 &lt;p&gt;但是，如果是要求&lt;strong&gt;在线的区间修改&lt;/strong&gt;，即修改一次，就要我们出一次值，我们就必须用树状数组来实现了。&lt;/p&gt;
 &lt;p&gt;树状数组想要实现区间修改，就是从维护普通的前缀和变成维护&lt;strong&gt;差分数组&lt;/strong&gt;的前缀和。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr6.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr6.png&#34;
 	width=&#34;1084&#34;
 	height=&#34;429&#34;
-	srcset=&#34;https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr6_hu_2088fa54f0c08d81.png 480w, https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr6_hu_5a0659d31e75c462.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr6_hu_2088fa54f0c08d81.png 480w, https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/tree-arr6_hu_5a0659d31e75c462.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;这里出现的n是错误，应该是r&#34;
@@ -628,10 +628,10 @@ $$\sum_{i=1}^{r}a_i=\sum_{i=1}^{r}  (r+1)d_i-\sum_{i=1}^{r}id_i$$&lt;p&gt;那么
 &lt;p&gt;一个整数，表示逆序对的个数。&lt;/p&gt;
 &lt;p&gt;分析：&lt;/p&gt;
 &lt;p&gt;此题求解逆序对，可以使用权值数组来求解，权值数组其实就是一个桶，桶的下标就是数组的值，桶的元素就是数组的值的个数。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/nixu.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/nixu.png&#34;
 	width=&#34;1393&#34;
 	height=&#34;861&#34;
-	srcset=&#34;https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/nixu_hu_f48ea0d05f8babe7.png 480w, https://baozi.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/nixu_hu_bfb92accbb98279b.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/nixu_hu_f48ea0d05f8babe7.png 480w, https://baoziandbluemouse.github.io/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/nixu_hu_bfb92accbb98279b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	

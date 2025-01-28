@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>STL on 包子-baozi</title>
-        <link>https://baozi.github.io/categories/stl/</link>
+        <link>https://baoziandbluemouse.github.io/categories/stl/</link>
         <description>Recent content in STL on 包子-baozi</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>baozi</copyright>
-        <lastBuildDate>Tue, 28 Jan 2025 17:07:49 +0800</lastBuildDate><atom:link href="https://baozi.github.io/categories/stl/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 28 Jan 2025 17:07:49 +0800</lastBuildDate><atom:link href="https://baoziandbluemouse.github.io/categories/stl/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>栈，优先队列，map，set，bitset</title>
-        <link>https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/</link>
+        <link>https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/</link>
         <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/</guid>
-        <description>&lt;img src="https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/mountain.jpg" alt="Featured image of post 栈，优先队列，map，set，bitset" /&gt;&lt;h1 id=&#34;前言&#34;&gt;前言
+        <guid>https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/</guid>
+        <description>&lt;img src="https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/mountain.jpg" alt="Featured image of post 栈，优先队列，map，set，bitset" /&gt;&lt;h1 id=&#34;前言&#34;&gt;前言
 &lt;/h1&gt;&lt;p&gt;&lt;strong&gt;学习网站&lt;/strong&gt;:&lt;a class=&#34;link&#34; href=&#34;https://www.starrycoding.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Starrycoding&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;本篇文章涉及部分STL的使用&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;关于使用STL&lt;/strong&gt;:&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1L8411y7th/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;【C++】算法竞赛常用 STL 用法&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;栈&#34;&gt;栈
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/zhan.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/zhan.png&#34;
 	width=&#34;1414&#34;
 	height=&#34;861&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/zhan_hu_541531b1d12a99b1.png 480w, https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/zhan_hu_f241fe4867f9d634.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/zhan_hu_541531b1d12a99b1.png 480w, https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/zhan_hu_f241fe4867f9d634.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;如何理解栈&#34;
@@ -169,10 +169,10 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：&lt;strong&gt;对栈顶进行操作时可能会有空栈的情况&lt;/strong&gt;，所以要先判断栈是否为空。&lt;/p&gt;
 &lt;h2 id=&#34;优先队列&#34;&gt;优先队列
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/youxianduilie.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/youxianduilie.png&#34;
 	width=&#34;1414&#34;
 	height=&#34;861&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/youxianduilie_hu_2cfff16c5cb24c35.png 480w, https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/youxianduilie_hu_cbfd4ededa62d5b5.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/youxianduilie_hu_2cfff16c5cb24c35.png 480w, https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/youxianduilie_hu_cbfd4ededa62d5b5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -311,10 +311,10 @@
 &lt;/div&gt;&lt;h2 id=&#34;map&#34;&gt;map
 &lt;/h2&gt;&lt;p&gt;map是由&lt;strong&gt;红黑树&lt;/strong&gt;实现的。可以理解为一堆&lt;strong&gt;有序（默认从小到大）的键值对&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;map还具有&lt;strong&gt;互异性&lt;/strong&gt;，即&lt;strong&gt;键(key)不能重复&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/map.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/map.png&#34;
 	width=&#34;804&#34;
 	height=&#34;455&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/map_hu_fc418bc858837a76.png 480w, https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/map_hu_43bae17df5dd7ddf.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/map_hu_fc418bc858837a76.png 480w, https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/map_hu_43bae17df5dd7ddf.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -465,10 +465,10 @@
 &lt;/h2&gt;&lt;p&gt;set也是由&lt;strong&gt;红黑树&lt;/strong&gt;实现的。但他和map不同的是，set&lt;strong&gt;只存储value&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;set最重要的特性是&lt;strong&gt;互异性&lt;/strong&gt;，即&lt;strong&gt;值(value)不能重复&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;set还具有&lt;strong&gt;有序性&lt;/strong&gt;，即&lt;strong&gt;值(value)是从小到大排序的&lt;/strong&gt;（默认，用比较器更改）。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/set.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/set.png&#34;
 	width=&#34;1393&#34;
 	height=&#34;838&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/set_hu_4d68d6ad3e2e43bf.png 480w, https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/set_hu_f32c98ca617af3f4.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/set_hu_4d68d6ad3e2e43bf.png 480w, https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/set_hu_f32c98ca617af3f4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -582,10 +582,10 @@
 &lt;p&gt;我们根据样例来看，样例给出1 1 5,答案有0,1,2,5,6,7六种数字，说明可以不选数字,得出来就是0.并且，这种加法操作有点涉及动态规划。&lt;/p&gt;
 &lt;p&gt;这题可以算是一种存在性dp,对于dp的设计思路，要先从方便理解的高维开始，再逐渐优化。&lt;/p&gt;
 &lt;p&gt;我们先设$dp[i][j]$表示前$i$个数，是否可以组成数字$j$,如果可以，就为1，否则为0。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/dp.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/dp.png&#34;
 	width=&#34;617&#34;
 	height=&#34;704&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/dp_hu_a1b889f2de87a039.png 480w, https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/dp_hu_e5787bcfe75dc038.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/dp_hu_a1b889f2de87a039.png 480w, https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/dp_hu_e5787bcfe75dc038.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -676,10 +676,10 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;但是，毫无疑问，这样做会导致TLE,我们要把二维设法优化成一维。
 观察上述二维dp，我们可以发现其实只需要一维的$dp[j]$进行数次覆盖即可。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/dp3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/dp3.png&#34;
 	width=&#34;629&#34;
 	height=&#34;682&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/dp3_hu_c2d43ee0f3efc4da.png 480w, https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/dp3_hu_352fb0d65f1a94f3.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/dp3_hu_c2d43ee0f3efc4da.png 480w, https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/dp3_hu_352fb0d65f1a94f3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -688,10 +688,10 @@
 		data-flex-basis=&#34;221px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/code.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/code.png&#34;
 	width=&#34;940&#34;
 	height=&#34;1736&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/code_hu_10112c240d4a3e4a.png 480w, https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/code_hu_c59d7a3a060d5b29.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/code_hu_10112c240d4a3e4a.png 480w, https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/code_hu_c59d7a3a060d5b29.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -702,10 +702,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;最终我们得出完整代码.需要注意的是，这里$j$要从大到小枚举，因为如果从小到大枚举，就会导致$dp[j]$会不断true，导致答案错误。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;不过这样做还是会TLE&lt;/strong&gt;，题目真正想要我们使用的是用bitset来做。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/bitset.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/bitset.png&#34;
 	width=&#34;410&#34;
 	height=&#34;487&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/bitset_hu_e3aa5c88d14c11b.png 480w, https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/bitset_hu_bd7d801b782a6c34.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/bitset_hu_e3aa5c88d14c11b.png 480w, https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/bitset_hu_bd7d801b782a6c34.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -719,10 +719,10 @@
 &lt;p&gt;&lt;strong&gt;bitset的好处&lt;/strong&gt;:
 他的所有操作都是$O(n/w)$的，其中$w$是bitset的&lt;strong&gt;位数&lt;/strong&gt;。(这能极大地减少时间复杂度).&lt;/p&gt;
 &lt;p&gt;同时，在&lt;strong&gt;用了bitset&lt;/strong&gt;后，我们的转移方程也可以进行优化。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/bitset2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/bitset2.png&#34;
 	width=&#34;327&#34;
 	height=&#34;266&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/bitset2_hu_e6e77624987f37c.png 480w, https://baozi.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/bitset2_hu_42a2b08ae7daeda9.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/bitset2_hu_e6e77624987f37c.png 480w, https://baoziandbluemouse.github.io/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/bitset2_hu_42a2b08ae7daeda9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;这里方便理解所以0,1,2是向右递增的，实际应该是向二进制一样2,1,0,左移才是增大&#34;

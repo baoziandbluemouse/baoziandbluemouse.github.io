@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>质因数分解 on 包子-baozi</title>
-        <link>https://baozi.github.io/categories/%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/</link>
+        <link>https://baoziandbluemouse.github.io/categories/%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/</link>
         <description>Recent content in 质因数分解 on 包子-baozi</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>baozi</copyright>
-        <lastBuildDate>Tue, 28 Jan 2025 17:07:49 +0800</lastBuildDate><atom:link href="https://baozi.github.io/categories/%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 28 Jan 2025 17:07:49 +0800</lastBuildDate><atom:link href="https://baoziandbluemouse.github.io/categories/%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>最小生成树，质因数分解</title>
-        <link>https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/</link>
+        <link>https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/</link>
         <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/</guid>
-        <description>&lt;img src="https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/cuixingshi.jpg" alt="Featured image of post 最小生成树，质因数分解" /&gt;&lt;h1 id=&#34;前言&#34;&gt;前言
+        <guid>https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/</guid>
+        <description>&lt;img src="https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/cuixingshi.jpg" alt="Featured image of post 最小生成树，质因数分解" /&gt;&lt;h1 id=&#34;前言&#34;&gt;前言
 &lt;/h1&gt;&lt;p&gt;&lt;strong&gt;学习网站&lt;/strong&gt;:&lt;a class=&#34;link&#34; href=&#34;https://www.starrycoding.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Starrycoding&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;最小生成树&#34;&gt;最小生成树
@@ -28,10 +28,10 @@
 当连接顶点之间的边有权重时，权重之和最小的生成树则为最小生成树。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree1.png&#34;
 	width=&#34;1073&#34;
 	height=&#34;671&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree1_hu_a00aedfafc5370c0.png 480w, https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree1_hu_eb15e67e07b7499c.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree1_hu_a00aedfafc5370c0.png 480w, https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree1_hu_eb15e67e07b7499c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -46,10 +46,10 @@
 &lt;li&gt;基于边的Kruskal算法&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;prim算法&#34;&gt;Prim算法
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree2.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree2.png&#34;
 	width=&#34;1218&#34;
 	height=&#34;707&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree2_hu_6f4d4971a25ca2.png 480w, https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree2_hu_2adf3a3520675491.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree2_hu_6f4d4971a25ca2.png 480w, https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree2_hu_2adf3a3520675491.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -67,10 +67,10 @@
 &lt;li&gt;我们用一个bool数组st[]来记录这个点是否已经被加入到生成树中。&lt;/li&gt;
 &lt;li&gt;我们用一个循环，每次循环中找到&lt;strong&gt;不在生成树&lt;/strong&gt;中的距离起点&lt;strong&gt;最近&lt;/strong&gt;的点，将这个点加入到生成树中。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree3.png&#34;
 	width=&#34;1124&#34;
 	height=&#34;768&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree3_hu_7e83bd4ad1cea320.png 480w, https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree3_hu_aaf71a3b897b5f5c.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree3_hu_7e83bd4ad1cea320.png 480w, https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree3_hu_aaf71a3b897b5f5c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -82,10 +82,10 @@
 &lt;ol start=&#34;5&#34;&gt;
 &lt;li&gt;当这个点加入进去，我们需要更新dist[]数组，将这个点的所有邻边的距离起点的距离更新一下。并且这个点的dist[]=0。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree4.png&#34;
 	width=&#34;1138&#34;
 	height=&#34;754&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree4_hu_48275e966cd8822b.png 480w, https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree4_hu_11f248665d059497.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree4_hu_48275e966cd8822b.png 480w, https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree4_hu_11f248665d059497.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -94,10 +94,10 @@
 		data-flex-basis=&#34;362px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree5.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree5.png&#34;
 	width=&#34;1249&#34;
 	height=&#34;745&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree5_hu_4e0a4ed4fbc3f4a6.png 480w, https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree5_hu_22e25066ff2eb61e.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree5_hu_4e0a4ed4fbc3f4a6.png 480w, https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/min-tree5_hu_22e25066ff2eb61e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -228,10 +228,10 @@
     &gt;P72 【模板】最小生成树&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;分析：&lt;/p&gt;
 &lt;p&gt;题目的数据范围在$10^5$，所以我们用朴素的Prim算法是不能过的。我们该如何优化呢，观察循环，我们可以发现，我们每次循环中都要找到&lt;strong&gt;不在生成树&lt;/strong&gt;中的距离起点&lt;strong&gt;最近&lt;/strong&gt;的点，这个点我们可以用一个优先队列来维护，每次取出堆顶元素即可。这样我们就可以将时间复杂度优化到$O(nlogn)$。（和dijkstra很像）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/you-hua1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/you-hua1.png&#34;
 	width=&#34;1212&#34;
 	height=&#34;673&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/you-hua1_hu_9518e64b39e1ce0c.png 480w, https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/you-hua1_hu_ed6be228afaddb89.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/you-hua1_hu_9518e64b39e1ce0c.png 480w, https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/you-hua1_hu_ed6be228afaddb89.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;入队过程1&#34;
@@ -243,10 +243,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;至于我们该如何入队，我们可以用一个循环来实现，每次循环中，我们将这个点的&lt;strong&gt;所有邻点的距离起点的距离更新一下&lt;/strong&gt;。并且这个点的dist[]=0。假如邻点的dist[]变化了，那么他就&lt;strong&gt;有可能成为最近点&lt;/strong&gt;，直接将他入队即可。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/you-hua2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/you-hua2.png&#34;
 	width=&#34;1141&#34;
 	height=&#34;795&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/you-hua2_hu_becf51fce454e64.png 480w, https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/you-hua2_hu_842693a5a49617a7.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/you-hua2_hu_becf51fce454e64.png 480w, https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/you-hua2_hu_842693a5a49617a7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;入队过程2&#34;
@@ -258,10 +258,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;之后我们就用优先队列来帮我们判断最近点。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/you-hua3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/you-hua3.png&#34;
 	width=&#34;1138&#34;
 	height=&#34;782&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/you-hua3_hu_5c961ceb5203d80d.png 480w, https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/you-hua3_hu_d1fe1e0ea8eda57.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/you-hua3_hu_5c961ceb5203d80d.png 480w, https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/you-hua3_hu_d1fe1e0ea8eda57.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;入队过程3&#34;
@@ -272,10 +272,10 @@
 		data-flex-basis=&#34;349px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/you-hua4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/you-hua4.png&#34;
 	width=&#34;401&#34;
 	height=&#34;330&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/you-hua4_hu_96cc1d256900fc3a.png 480w, https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/you-hua4_hu_875ca72b44a4f351.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/you-hua4_hu_96cc1d256900fc3a.png 480w, https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/you-hua4_hu_875ca72b44a4f351.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;入队过程4&#34;
@@ -445,10 +445,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;kruskal算法&#34;&gt;Kruskal算法
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/kruskal1.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/kruskal1.png&#34;
 	width=&#34;1088&#34;
 	height=&#34;729&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/kruskal1_hu_e543bd5b92e3ff70.png 480w, https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/kruskal1_hu_6b988b6dfebf7493.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/kruskal1_hu_e543bd5b92e3ff70.png 480w, https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/kruskal1_hu_6b988b6dfebf7493.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -460,10 +460,10 @@
 &lt;p&gt;kruskal算法是基于边的算法，它的思想是&lt;strong&gt;根据权值从小到大&lt;/strong&gt;将边进行联通（用并查集），如果这条边的两个点已经联通了，那么这条边就不能加入到生成树中。&lt;/p&gt;
 &lt;p&gt;这种算法就是一种贪心的算法，它的时间复杂度为$O(mlogm)$。m指的是边的数量。&lt;/p&gt;
 &lt;p&gt;下面演示一下kruskal算法的过程：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/kruskal2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/kruskal2.png&#34;
 	width=&#34;877&#34;
 	height=&#34;510&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/kruskal2_hu_799301c8309ed17a.png 480w, https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/kruskal2_hu_c9431a5791a29f18.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/kruskal2_hu_799301c8309ed17a.png 480w, https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/kruskal2_hu_c9431a5791a29f18.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;过程1&#34;
@@ -475,10 +475,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;首先我们将所有的边按照权值从小到大排序。然后我们从&lt;strong&gt;权值最小&lt;/strong&gt;的边开始，将这条边的&lt;strong&gt;两个点进行联通&lt;/strong&gt;。如图是&lt;strong&gt;将1和2联通&lt;/strong&gt;。接着再将2和4联通。就这样一直进行下去。直到所有的点都联通。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/kruskal3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/kruskal3.png&#34;
 	width=&#34;858&#34;
 	height=&#34;488&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/kruskal3_hu_1303d1b75ec66da0.png 480w, https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/kruskal3_hu_6d4785f50a7d9275.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/kruskal3_hu_1303d1b75ec66da0.png 480w, https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/kruskal3_hu_6d4785f50a7d9275.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;过程2&#34;
@@ -489,10 +489,10 @@
 		data-flex-basis=&#34;421px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/kruskal4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/kruskal4.png&#34;
 	width=&#34;1023&#34;
 	height=&#34;583&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/kruskal4_hu_caa797fd096245e2.png 480w, https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/kruskal4_hu_5ddc0cd6e3739619.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/kruskal4_hu_caa797fd096245e2.png 480w, https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/kruskal4_hu_5ddc0cd6e3739619.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;过程3&#34;
@@ -688,10 +688,10 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;总结&#34;&gt;总结
 &lt;/h3&gt;&lt;p&gt;通常来说，我们更倾向使用kruskal算法，因为他实现很简单&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/zongjie.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/zongjie.png&#34;
 	width=&#34;928&#34;
 	height=&#34;505&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/zongjie_hu_ae7f72ec3903a362.png 480w, https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/zongjie_hu_270a2d3d2e9b85c6.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/zongjie_hu_ae7f72ec3903a362.png 480w, https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/zongjie_hu_270a2d3d2e9b85c6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -710,10 +710,10 @@
 &lt;li&gt;质数的判断&lt;/li&gt;
 &lt;li&gt;筛法&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/zhishu1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/zhishu1.png&#34;
 	width=&#34;1350&#34;
 	height=&#34;749&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/zhishu1_hu_e9e26621b0ed3ac4.png 480w, https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/zhishu1_hu_3ed896ee8139fa7.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/zhishu1_hu_e9e26621b0ed3ac4.png 480w, https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/zhishu1_hu_3ed896ee8139fa7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -765,10 +765,10 @@
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.starrycoding.com/problem/16&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;P16 【模板】求N的所有因子&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;分析：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/yinzifenjie.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/yinzifenjie.png&#34;
 	width=&#34;991&#34;
 	height=&#34;691&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/yinzifenjie_hu_4a998185b619d6b6.png 480w, https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/yinzifenjie_hu_86afaaed231b407.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/yinzifenjie_hu_4a998185b619d6b6.png 480w, https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/yinzifenjie_hu_86afaaed231b407.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -852,10 +852,10 @@
 &lt;p&gt;对于求N的质因子，我们可以将N分解为多个质因子的乘积。&lt;/p&gt;
 &lt;p&gt;例如：$12=2\times 2\times 3$&lt;/p&gt;
 &lt;p&gt;所以我们只要从&lt;strong&gt;2开始枚举，判断能否整除&lt;/strong&gt;，如果可以整除，那么就将这个质因子加入到vector中，并且&lt;strong&gt;将N持续除以这个数，直到N不能再被这个数整除&lt;/strong&gt;。如此才会&lt;strong&gt;保证&lt;/strong&gt;N是由多个质因子的乘积组成的。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/zhiyinshu1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/zhiyinshu1.png&#34;
 	width=&#34;996&#34;
 	height=&#34;764&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/zhiyinshu1_hu_3ce0652fcb7c795d.png 480w, https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/zhiyinshu1_hu_1d8a7fe5a6df0958.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/zhiyinshu1_hu_3ce0652fcb7c795d.png 480w, https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/zhiyinshu1_hu_1d8a7fe5a6df0958.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;过程演示&#34;
@@ -868,10 +868,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;为何这样枚举得到的因子&lt;strong&gt;一定是质数&lt;/strong&gt;呢？&lt;/p&gt;
 &lt;p&gt;我们可以用一个反证法来证明。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/zhiyinshu2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/zhiyinshu2.png&#34;
 	width=&#34;870&#34;
 	height=&#34;769&#34;
-	srcset=&#34;https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/zhiyinshu2_hu_2b1f2e12d9935285.png 480w, https://baozi.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/zhiyinshu2_hu_b207fb3996a2f9d6.png 1024w&#34;
+	srcset=&#34;https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/zhiyinshu2_hu_2b1f2e12d9935285.png 480w, https://baoziandbluemouse.github.io/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/zhiyinshu2_hu_b207fb3996a2f9d6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;证明&#34;
