@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/'>
 
-<link rel="stylesheet" href="/scss/style.min.f63413209011d2551032a1faf0503f0785698998b59099fea6168483a44671fc.css"><meta property='og:title' content="算法学习-前缀和与差分">
+<link rel="stylesheet" href="/scss/style.min.5857846ba37f8c739ca54073105e840c417250eba936bf2ae06160f099f2f026.css"><meta property='og:title' content="算法学习-前缀和与差分">
 <meta property='og:description' content="附最大子段和两种解法">
 <meta property='og:url' content='https://baoziandbluemouse.github.io/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/'>
 <meta property='og:site_name' content='包子-baozi'>
@@ -612,6 +612,10 @@ $$b_1+b_2+...b_i=a_i$$<p>我们由此得出差分的性质就是可以通过<str
 		data-flex-basis="297px"
 	
 ></p>
+<p>如图，只要在$d_2$加上$x$，在$d_4$减去$x$即可
+由此，我们得出了<strong>差分的区间修改</strong>的公式
+若想修改$[l,r]$区间的数，只需在<strong>差分数组</strong>上做如下操作
+</p>
 $$d_l+=x,d_{r+1}-=x$$<p>此时，我们再回过头看开头时我们是如何<strong>表示差分的</strong>,就可以发现其实他们也<strong>遵循了这个修改区间的公式</strong>,只不过他们的区间很小,是$[1,2]$,$[2,3]$,$[3,4]$&hellip;以此类推下去。
 <strong>注</strong>:一维差分数组可以直接用$d_i=a_i-a_{i-1}$来表示，而二维差分数组我们一般用上面的<strong>公式</strong>来<strong>初始化</strong></p>
 <p><img src="/p/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86/differ4.png"
@@ -755,6 +759,10 @@ $$d_l+=x,d_{r+1}-=x$$<p>此时，我们再回过头看开头时我们是如何<s
 由图，我们先假设<strong>我们已经初始化了一个二维差分数组</strong>，图上这些<strong>格子内部便是坐标点</strong>,现在我们要给$[2,2]$到$[4,4]$区间加上一个数$x$
 就应该把$d_{2,2}$加上$x$，$d_{4+1,2}-=x$,$d_{2,4+1}-=x$,$d_{4+1,4+1}+=x$</p>
 <p>同理，我们<strong>初始化也可以如此操作</strong></p>
+<p>那么我们就可以得出二维差分的区间修改公式
+假设我们修改的区间为$[x_1,y_1],[x_2,y_2]$
+则有以下<strong>公式</strong>
+</p>
 $$d_{x_1,y_1}+=x,d_{x_2+1,y_1}-=x,d_{x_1,y_2+1}-=x,d_{x_2+1,y_2+1}+=x$$<p>模板:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1153,6 +1161,54 @@ $$d_{x_1,y_1}+=x,d_{x_2+1,y_1}-=x,d_{x_1,y_2+1}-=x,d_{x_2+1,y_2+1}+=x$$<p>模板
             
                 
 <article class="has-image">
+    <a href="/p/%E7%BB%84%E5%90%88%E6%95%B0%E8%83%8C%E5%8C%85dp/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E7%BB%84%E5%90%88%E6%95%B0%E8%83%8C%E5%8C%85dp/end.5926d957c7dca957a45e2cd11d1f70b0_hu_f21e55bc765a8bdc.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 组合数，背包dp"
+                        
+                        data-hash="md5-WSbZV8fcqVekXizRHR9wsA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">组合数，背包dp</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/9.0c4bf8b2fbb43d5a776418f602e7f1f6_hu_e100ebb53515c8fb.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 埃式筛，快速幂，gcd和lcm，乘法逆元"
+                        
+                        data-hash="md5-DEv4svu0PVp3ZBj2Aufx9g==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">埃式筛，快速幂，gcd和lcm，乘法逆元</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
     <a href="/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/">
         
         
@@ -1218,54 +1274,6 @@ $$d_{x_1,y_1}+=x,d_{x_2+1,y_1}-=x,d_{x_1,y_2+1}-=x,d_{x_2+1,y_2+1}+=x$$<p>模板
 
         <div class="article-details">
             <h2 class="article-title">离散化，树状数组</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/%E5%8D%95%E8%B0%83%E6%A0%88%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/">
-        
-        
-            <div class="article-image">
-                <img src="/p/%E5%8D%95%E8%B0%83%E6%A0%88%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/zhenhong.2a3f89de850230ae792159838ab63ad6_hu_3820d9b5280c4b90.jpg" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 单调栈，单调队列"
-                        
-                        data-hash="md5-Kj&#43;J3oUCMK55IVmDirY61g==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">单调栈，单调队列</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/">
-        
-        
-            <div class="article-image">
-                <img src="/p/%E6%A0%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97mapsetbitset/mountain.dd586ef4b9c8122ee56d82c84de7b69a_hu_afce2d97d429aa7d.jpg" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 栈，优先队列，map，set，bitset"
-                        
-                        data-hash="md5-3Vhu9LnIEi7lbYLITee2mg==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">栈，优先队列，map，set，bitset</h2>
         </div>
     </a>
 </article>

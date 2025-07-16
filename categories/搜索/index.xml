@@ -476,8 +476,7 @@
 &lt;/ol&gt;
 &lt;blockquote&gt;
 &lt;p&gt;左斜角线：ls[i+j]=1;&lt;/p&gt;
-&lt;p&gt;右斜角线：rs[i-j+n]=1; n即为行数，此处为8&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;右斜角线：rs[i-j+n]=1; n即为行数，此处为8&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;排列型枚举的代码模板&lt;/li&gt;
 &lt;/ul&gt;
@@ -1510,8 +1509,7 @@
 &lt;p&gt;函数解释：&lt;/p&gt;
 &lt;p&gt;将s中前n个字节 （typedef unsigned int size_t ）用 ch&lt;/p&gt;
 &lt;p&gt;替换并返回 s 。 其实这里面的ch就是ascii为ch的字符；&lt;/p&gt;
-&lt;p&gt;将s所指向的某一块内存中的前n个 字节的内容全部设置为ch指定的ASCII值&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;将s所指向的某一块内存中的前n个 字节的内容全部设置为ch指定的ASCII值&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h4 id=&#34;双向广搜满足条件可以使用的优化&#34;&gt;双向广搜（满足条件可以使用的优化）
 &lt;/h4&gt;&lt;p&gt;与普通的BFS不同，双向BFS维护的&lt;strong&gt;队列中分别有起点搜索出的点和终点搜索出的点&lt;/strong&gt;，两个点的搜索交替进行。同时，用&lt;strong&gt;数组&lt;/strong&gt;或是&lt;strong&gt;哈希表&lt;/strong&gt;记录当前的搜索情况，给从两个方向拓展的节点以&lt;strong&gt;不同的标记&lt;/strong&gt;。当某点被&lt;strong&gt;两种标记&lt;/strong&gt;同时标记时，搜索结束&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;使用条件&lt;/strong&gt;：当起点和终点状态&lt;strong&gt;已知&lt;/strong&gt;，则可以使用&lt;/p&gt;

@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="请输入文字描述">
+<title>埃式筛，快速幂，gcd和lcm，乘法逆元</title>
+
+<link rel='canonical' href='https://baoziandbluemouse.github.io/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/'>
+
+<link rel="stylesheet" href="/scss/style.min.5857846ba37f8c739ca54073105e840c417250eba936bf2ae06160f099f2f026.css"><meta property='og:title' content="埃式筛，快速幂，gcd和lcm，乘法逆元">
+<meta property='og:description' content="请输入文字描述">
+<meta property='og:url' content='https://baoziandbluemouse.github.io/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/'>
+<meta property='og:site_name' content='包子-baozi'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-02-01T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-07-16T19:06:44&#43;08:00'/><meta property='og:image' content='https://baoziandbluemouse.github.io/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/9.jpg' />
+<meta name="twitter:title" content="埃式筛，快速幂，gcd和lcm，乘法逆元">
+<meta name="twitter:description" content="请输入文字描述"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://baoziandbluemouse.github.io/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/9.jpg' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_8d6e3c576e07fccf.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">⚛️</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">包子-baozi</a></h1>
+            <h2 class="site-description">欢迎来到我的博客！</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/11164702'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-eye"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></svg>
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友情链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#埃式筛">埃式筛</a>
+      <ol>
+        <li><a href="#例题">例题</a></li>
+      </ol>
+    </li>
+    <li><a href="#gcd和lcm">gcd和lcm</a>
+      <ol>
+        <li><a href="#例题-1">例题</a></li>
+      </ol>
+    </li>
+    <li><a href="#快速幂">快速幂</a>
+      <ol>
+        <li><a href="#例题-2">例题</a></li>
+      </ol>
+    </li>
+    <li><a href="#乘法逆元">乘法逆元</a>
+      <ol>
+        <li><a href="#例题-3">例题</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/">
+                <img src="/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/9_hu_511e410eae5b0d89.jpg"
+                        srcset="/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/9_hu_511e410eae5b0d89.jpg 800w, /p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/9_hu_d8869aa7bed8f96d.jpg 1600w"
+                        width="800" 
+                        height="566" 
+                        loading="lazy"
+                        alt="Featured image of post 埃式筛，快速幂，gcd和lcm，乘法逆元" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/algorithm/" >
+                Algorithm
+            </a>
+        
+            <a href="/categories/%E5%9F%83%E5%BC%8F%E7%AD%9B/" >
+                埃式筛
+            </a>
+        
+            <a href="/categories/%E5%BF%AB%E9%80%9F%E5%B9%82/" >
+                快速幂
+            </a>
+        
+            <a href="/categories/gcd%E5%92%8Clcm/" >
+                Gcd和lcm
+            </a>
+        
+            <a href="/categories/%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/" >
+                乘法逆元
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/">埃式筛，快速幂，gcd和lcm，乘法逆元</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            请输入文字描述
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-02-01</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="前言">前言
+</h1><p><strong>学习网站</strong>:<a class="link" href="https://www.starrycoding.com/"  target="_blank" rel="noopener"
+    >Starrycoding</a></p>
+<p><strong>常用算法wiki</strong>:<a class="link" href="https://oi-wiki.org/"  target="_blank" rel="noopener"
+    >OI wiki</a></p>
+<h2 id="埃式筛">埃式筛
+</h2><p>埃式筛是一种用于快速找到一定范围内所有质数的算法。它的基本思想是从2开始，将每个质数的倍数都标记成合数，直到筛完所有小于等于n的数。</p>
+<p>具体来说，算法的步骤如下：</p>
+<ol>
+<li>初始化一个vis数组，将所有元素标记为0,刚开始我们认为所有数都是质数。而1代表不是质数。然后我们初始化将0，1标记为1。</li>
+<li>从2开始判断是不是质数，如果是质数，就将它的倍数都标记为1.</li>
+<li>然后我们判断下一个数是不是质数，如果是质数，就将它的倍数都标记为1.</li>
+</ol>
+<p><img src="/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/shai1.png"
+	width="1092"
+	height="705"
+	srcset="/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/shai1_hu_d5d7c77b4fe5bf65.png 480w, /p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/shai1_hu_3d7bc71570fe731d.png 1024w"
+	loading="lazy"
+	
+		alt="过程1"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="154"
+		data-flex-basis="371px"
+	
+></p>
+<p>最终vis数组中为0的数就是质数。</p>
+<p><img src="/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/shai2.png"
+	width="1393"
+	height="861"
+	srcset="/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/shai2_hu_dfa2e16f53bfcdd5.png 480w, /p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/shai2_hu_630062677bbf2caa.png 1024w"
+	loading="lazy"
+	
+		alt="过程2"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="161"
+		data-flex-basis="388px"
+	
+></p>
+<h3 id="例题">例题
+</h3><p><a class="link" href="https://www.starrycoding.com/problem/43"  target="_blank" rel="noopener"
+    >P43 【模板】埃氏筛法</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mf">2e6</span> <span class="o">+</span> <span class="mi">9</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">bitset</span><span class="o">&lt;</span><span class="n">N</span><span class="o">&gt;</span> <span class="n">vis</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vis</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vis</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span> <span class="o">+=</span> <span class="n">i</span><span class="p">)</span>  <span class="c1">// 从i的2倍开始，每次加i
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">vis</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; &#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>我们可以分析下这个算法的时间复杂度。</p>
+<p><img src="/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/shai3.png"
+	width="510"
+	height="572"
+	srcset="/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/shai3_hu_b10a596f23921d08.png 480w, /p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/shai3_hu_f21a8037bc5c2016.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="89"
+		data-flex-basis="213px"
+	
+></p>
+<p>如图，我们可以看到，埃式筛<strong>枚举倍数</strong>的方法使得这个循环的时间复杂度为$O(n\log n)$。于是总共就是$O(n\log\log n)$。</p>
+<p>顺带一提，枚举倍数我们也可以优化，将循环改为这样：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="p">(</span><span class="n">ll</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1ll</span><span class="o">*</span><span class="n">i</span> <span class="o">*</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span> <span class="o">+=</span> <span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">vis</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>初始化j为i的平方，不会影响结果（我们可以自己代数字看一下，假设i很大，那么在到i之前，$2\times i$,$3\times i$,$4\times i$等倍数肯定已经在枚举到$2,3$等数的时候被标记过了）。</p>
+<p>最终代码就是:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mf">2e6</span> <span class="o">+</span> <span class="mi">9</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">bitset</span><span class="o">&lt;</span><span class="n">N</span><span class="o">&gt;</span> <span class="n">vis</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vis</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vis</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="p">(</span><span class="n">ll</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1ll</span><span class="o">*</span><span class="n">i</span> <span class="o">*</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span> <span class="o">+=</span> <span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">vis</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; &#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="gcd和lcm">gcd和lcm
+</h2><p>gcd是最大公因数，lcm是最小公倍数。</p>
+<p><img src="/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/gcd1.png"
+	width="995"
+	height="637"
+	srcset="/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/gcd1_hu_87852c71168c0ee5.png 480w, /p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/gcd1_hu_3cdcad4d58d728f0.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="156"
+		data-flex-basis="374px"
+	
+></p>
+<p>关于gcd和lcm，我们首要要知道一个定理，叫做<strong>惟一分解定理</strong></p>
+<p>该定理断言：任何一个<strong>大于1的整数n</strong>都可以<strong>分解成若干个素因数的连乘积</strong>，如果不计各个素因数的顺序，那么这种分解是<strong>惟一</strong>的</p>
+$$N={p_1}^{a_1} \times {p_2}^{a_2} \times {p_3}^{a_3} \times {p_4}^{a_4} ....\times {p_m}^{a_m} $$<p>其中$p_i$是素数，$a_i$是正整数。</p>
+<p>而gcd和lcm也与这个定理有关。</p>
+<p><img src="/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/gcd2.png"
+	width="764"
+	height="788"
+	srcset="/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/gcd2_hu_bc2fcbc191fdaace.png 480w, /p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/gcd2_hu_e93da0736795fa51.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="96"
+		data-flex-basis="232px"
+	
+></p>
+<p>如图，将两个数的质因数分解，保证他们的因子全部相同，那么他们的gcd就是这些因子的最小值乘积，而lcm就是这些因子的最大值乘积。</p>
+<p>同时，我们可以发现$gcd(a,b)\times lcm(a,b)=a\times b$。</p>
+<p>于是，我们得出了gcd与lcm的关系，那么我们只要求出gcd或lcm，另一个就可以通过公式得出。</p>
+<p>通常，我们会使用<strong>辗转相除法</strong>来求gcd。然后再得出lcm。</p>
+<p><img src="/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/gcd3.png"
+	width="932"
+	height="717"
+	srcset="/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/gcd3_hu_3ff2c61cd52f3661.png 480w, /p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/gcd3_hu_e27374c6110d896f.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="129"
+		data-flex-basis="311px"
+	
+></p>
+<p>辗转相除法的代码如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ll</span> <span class="nf">gcd</span><span class="p">(</span><span class="n">ll</span> <span class="n">a</span><span class="p">,</span> <span class="n">ll</span> <span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">gcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="例题-1">例题
+</h3><p><a class="link" href="https://www.starrycoding.com/problem/65"  target="_blank" rel="noopener"
+    >P65 【模板】gcd和lcm</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ll</span> <span class="nf">gcd</span><span class="p">(</span><span class="n">ll</span> <span class="n">a</span><span class="p">,</span> <span class="n">ll</span> <span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">gcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ll</span> <span class="nf">lcm</span><span class="p">(</span><span class="n">ll</span> <span class="n">a</span><span class="p">,</span> <span class="n">ll</span> <span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span> <span class="o">*</span> <span class="n">b</span><span class="p">;</span>  <span class="c1">// 注意这里要先除再乘，防止溢出
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">solve</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ll</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span> <span class="o">&gt;&gt;</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">lcm</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">t</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">t</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">t</span><span class="o">--</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">solve</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="快速幂">快速幂
+</h2><p>快速幂是一种用于计算幂运算的算法，它可以在$O(\log n)$的时间复杂度内计算出$a^n$的值。</p>
+<p>快速幂的基本思想是将幂运算转化为二进制数的形式，然后利用二进制数的性质来计算幂运算。</p>
+<p><img src="/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/qmi.png"
+	width="760"
+	height="787"
+	srcset="/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/qmi_hu_9c0f40d5fa160f38.png 480w, /p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/qmi_hu_f20ecfcca2a776b0.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="96"
+		data-flex-basis="231px"
+	
+></p>
+<p>如图，假设我们要计算$a^n$，我们可以将n转化为二进制数，然后将二进制数转化为幂运算的形式。</p>
+<p>例如，$a^7$可以转化为$a^4\times a^2\times a^1$。</p>
+<p>7的二进制为111，我们对应只要有1就乘上a，并且数字a每次都要自乘，这样就可以得到$a^7$。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">ll</span> <span class="nf">qmi</span><span class="p">(</span><span class="n">ll</span> <span class="n">a</span><span class="p">,</span> <span class="n">ll</span> <span class="n">b</span><span class="p">,</span> <span class="n">ll</span> <span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ll</span> <span class="n">res</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">b</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">// 如果b的二进制最后一位为1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">=</span> <span class="n">res</span> <span class="o">*</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">a</span><span class="p">;</span> <span class="c1">// 每次循环a都要翻倍
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">b</span> <span class="o">&gt;&gt;=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>需要注意的是，假如题目有运用快速幂，那么题目<strong>绝对是要取模</strong>的，因为出题人肯定要想办法避免数据溢出。</p>
+<p>这里要指出取模运算对于$+-\times$这三种运算是封闭的，也就是说，$(a+b)%m=(a%m+b%m)%m$，$(a\times b)%m=(a%m\times b%m)%m$。</p>
+<p>我们可以看出在<strong>最终结果需要取模</strong>时，我们可以将<strong>每一步都取模，却不会影响最终结果</strong>。</p>
+<h3 id="例题-2">例题
+</h3><p><a class="link" href="https://www.starrycoding.com/problem/66"  target="_blank" rel="noopener"
+    >P66 【模板】快速幂</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ll</span> <span class="nf">qmi</span><span class="p">(</span><span class="n">ll</span> <span class="n">a</span><span class="p">,</span> <span class="n">ll</span> <span class="n">b</span><span class="p">,</span> <span class="n">ll</span> <span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ll</span> <span class="n">res</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">b</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">// 如果b的二进制最后一位为1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">=</span> <span class="n">res</span> <span class="o">*</span> <span class="n">a</span> <span class="o">%</span> <span class="n">c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">a</span> <span class="o">%</span> <span class="n">c</span><span class="p">;</span> <span class="c1">// 每次循环a都要翻倍
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">b</span> <span class="o">&gt;&gt;=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">solve</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ll</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span> <span class="o">&gt;&gt;</span> <span class="n">b</span> <span class="o">&gt;&gt;</span> <span class="n">c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">qmi</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">t</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">t</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">t</span><span class="o">--</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">solve</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="乘法逆元">乘法逆元
+</h2><p>乘法逆元是数论里的知识</p>
+<p><img src="/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/niyuan1.png"
+	width="1144"
+	height="763"
+	srcset="/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/niyuan1_hu_4f5c0d67aea3b287.png 480w, /p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/niyuan1_hu_c72e7183e9edd2f3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="359px"
+	
+></p>
+<p>假设一个方程为$\frac{1}{a} \bmod b = x$</p>
+<p>我们可以将其转化为$x\times a \bmod b = 1$。</p>
+<p>其中的<strong>这个$x$为a的逆元($\bmod b$ 意义下)</strong>。</p>
+<p>即</p>
+$$\frac{a\times b}{c} \mod d = (a\times b \times inv(c)) \mod d$$<p>其中的$inv(c)$为c的逆元。</p>
+<p>需要注意的是，这个逆元绝对是要有取模参与的。</p>
+<p>接着我们还要知道<strong>费马小定理</strong>。</p>
+<p><img src="/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/niyuan2.png"
+	width="1048"
+	height="768"
+	srcset="/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/niyuan2_hu_28db642548c0a2.png 480w, /p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/niyuan2_hu_1e5c4e97e4955f0.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="136"
+		data-flex-basis="327px"
+	
+></p>
+<p>费马小定理告诉我们</p>
+<p>当$p$为<strong>质数</strong>时（<strong>任意</strong>一个质数都行），始终有</p>
+$$a^{p-1} \bmod p = 1$$<p>则有</p>
+$$a^{p-1}  \equiv 1 \pmod{p} $$$$a \times a^{p-2} \equiv 1 \pmod{p} $$$$a^{p-2} \equiv \frac{1}{a}  \pmod{p} $$$$a^{p-2} \equiv inv(a) \pmod{p} $$<p>所以，我们就可以用<strong>快速幂加上取模来求逆元</strong>了（很明显，要求逆元题目就会规定一个<strong>质数来让你取模</strong>,常见的有$998244353$,$1e9+7$）</p>
+<h3 id="例题-3">例题
+</h3><p><a class="link" href="https://www.starrycoding.com/problem/44"  target="_blank" rel="noopener"
+    >P44 【模板】乘法逆元</a></p>
+<p>分析:</p>
+<p><img src="/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/niyuan3.png"
+	width="916"
+	height="417"
+	srcset="/p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/niyuan3_hu_35c9a7745c197599.png 480w, /p/%E5%9F%83%E5%BC%8F%E7%AD%9B%E5%BF%AB%E9%80%9F%E5%B9%82gcd%E5%92%8Clcm%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83/niyuan3_hu_2f54bc39350fe563.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="219"
+		data-flex-basis="527px"
+	
+></p>
+<p>如图，我们可以把</p>
+$$\frac{a\times x + b}{c\times x} $$<p>转化为</p>
+$$(a\times x +b) \times (c\times x)^{p-2} \bmod p$$<p>如此就可以求出题目的函数值，并且不会<strong>数据溢出</strong></p>
+<p>假如不用这种方法，有<strong>除法存在</strong>会导致我们没法使用<strong>取模</strong>来使数据不溢出</p>
+<p>代码如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="n">ll</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">998244353</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ll</span> <span class="nf">qmi</span><span class="p">(</span><span class="n">ll</span> <span class="n">a</span><span class="p">,</span> <span class="n">ll</span> <span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ll</span> <span class="n">res</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">b</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">// 如果b的二进制最后一位为1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">=</span> <span class="n">res</span> <span class="o">*</span> <span class="n">a</span> <span class="o">%</span> <span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">a</span> <span class="o">%</span> <span class="n">p</span><span class="p">;</span> <span class="c1">// 每次循环a都要翻倍
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">b</span> <span class="o">&gt;&gt;=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ll</span> <span class="nf">inv</span><span class="p">(</span><span class="n">ll</span> <span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">qmi</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span> <span class="o">-</span> <span class="mi">2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ll</span> <span class="nf">f</span><span class="p">(</span><span class="n">ll</span> <span class="n">x</span><span class="p">,</span> <span class="n">ll</span> <span class="n">a</span><span class="p">,</span> <span class="n">ll</span> <span class="n">b</span><span class="p">,</span> <span class="n">ll</span> <span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">((</span><span class="n">a</span> <span class="o">*</span> <span class="n">x</span> <span class="o">%</span> <span class="n">p</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">%</span> <span class="n">p</span><span class="p">)</span> <span class="o">*</span> <span class="n">inv</span><span class="p">(</span><span class="n">c</span> <span class="o">*</span> <span class="n">x</span> <span class="o">%</span> <span class="n">p</span><span class="p">)</span> <span class="o">%</span> <span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">solve</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ll</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">q</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span> <span class="o">&gt;&gt;</span> <span class="n">b</span> <span class="o">&gt;&gt;</span> <span class="n">c</span> <span class="o">&gt;&gt;</span> <span class="n">q</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">q</span><span class="o">--</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ll</span> <span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">t</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">t</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">t</span><span class="o">--</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">solve</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>根据CC BY-NC-SA 4.0协议授权</span>
+    </section>
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 2025-07-16
+        </span>
+    </section></footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E7%BB%84%E5%90%88%E6%95%B0%E8%83%8C%E5%8C%85dp/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E7%BB%84%E5%90%88%E6%95%B0%E8%83%8C%E5%8C%85dp/end.5926d957c7dca957a45e2cd11d1f70b0_hu_f21e55bc765a8bdc.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 组合数，背包dp"
+                        
+                        data-hash="md5-WSbZV8fcqVekXizRHR9wsA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">组合数，背包dp</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/cuixingshi.a045a944c5232aaaf1bbe942ad8bcf03_hu_73a1a09eed3c9be0.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 最小生成树，质因数分解"
+                        
+                        data-hash="md5-oEWpRMUjKqrxu&#43;lCrYvPAw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">最小生成树，质因数分解</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%9B%BE%E7%9A%84%E5%AD%98%E5%82%A8%E5%B9%B6%E6%9F%A5%E9%9B%86%E6%9C%80%E7%9F%AD%E8%B7%AF/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E5%9B%BE%E7%9A%84%E5%AD%98%E5%82%A8%E5%B9%B6%E6%9F%A5%E9%9B%86%E6%9C%80%E7%9F%AD%E8%B7%AF/ok.5574d4f65f8ee7b474b18ec991026369_hu_5728c589431f7c19.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 图的存储，并查集，最短路"
+                        
+                        data-hash="md5-VXTU9l&#43;O57R0sY7JkQJjaQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">图的存储，并查集，最短路</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E7%A6%BB%E6%95%A3%E5%8C%96%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/neuro.1ba9bc7919dac6f593d6e0cf620b8eda_hu_a6dd183b9a768028.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 离散化，树状数组"
+                        
+                        data-hash="md5-G6m8eRnaxvWT1uDPYguO2g==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">离散化，树状数组</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%8D%95%E8%B0%83%E6%A0%88%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E5%8D%95%E8%B0%83%E6%A0%88%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/zhenhong.2a3f89de850230ae792159838ab63ad6_hu_3820d9b5280c4b90.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 单调栈，单调队列"
+                        
+                        data-hash="md5-Kj&#43;J3oUCMK55IVmDirY61g==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">单调栈，单调队列</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 baozi
+    </section>
+    
+    <section class="powerby">
+        
+            我等生来追逐辉光，一如火花向上飞舞 <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<style>
+  @font-face {
+    font-family: 'wenquan';
+    src: url(https://baoziandbluemouse.github.io/font/SarasaMonoSC-Bold.ttf) format('truetype');
+  }
+
+  :root {
+    --base-font-family: 'wenquan';
+    --code-font-family: 'wenquan';
+  }
+</style>
+
+<style>
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-image: url(https://baoziandbluemouse.github.io/icons/backTop.svg);
+    }
+</style>
+
+<script>
+    
+
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        
+        let btn = document.createElement("div");
+        btn.id = "backTopBtn";
+        btn.onclick = backToTop
+        rightSideBar.appendChild(btn)
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
+
+    
+
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
+</script>
+
+
+
+
+<style>
+    .highlight {
+         
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .code-more-btn {
+        display: block;
+        margin: auto;
+        width: 44px;
+        height: 22px;
+        background: #f0f0f5;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding-top: 6px;
+        cursor: pointer;
+    }
+
+    .code-more-img {
+        cursor: pointer !important;
+        display: block;
+        margin: auto;
+        width: 22px;
+        height: 16px;
+    }
+</style>
+
+<script>
+  function initCodeMoreBox() {
+    let codeBlocks = document.querySelectorAll(".highlight");
+    if (!codeBlocks) {
+      return;
+    }
+    codeBlocks.forEach(codeBlock => {
+      
+      if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+        return;
+      }
+      
+      
+      let codeMoreBox = document.createElement('div');
+      codeMoreBox.classList.add('code-more-box');
+      
+      let codeMoreBtn = document.createElement('span');
+      codeMoreBtn.classList.add('code-more-btn');
+      codeMoreBtn.addEventListener('click', () => {
+        codeBlock.classList.add('code-show');
+        codeMoreBox.style.display = 'none';
+      })
+      
+      let img = document.createElement('img');
+      img.classList.add('code-more-img');
+      img.src = "https://baoziandbluemouse.github.io/icons/codeMore.png"
+      
+      codeMoreBtn.appendChild(img);
+      codeMoreBox.appendChild(codeMoreBtn);
+      codeBlock.appendChild(codeMoreBox)
+    })
+  }
+  
+  initCodeMoreBox();
+</script>
+
+
+<div id="particles-js"></div>
+
+<script src=https://baoziandbluemouse.github.io/background/particles.min.js></script>
+<script>
+  particlesJS.load('particles-js', "https://baoziandbluemouse.github.io/background/particlesjs-config.json", function() {
+    console.log('particles.js loaded - callback');
+  });
+</script>
+
+<style>
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+</style>
+
+
+
+    </body>
+</html>

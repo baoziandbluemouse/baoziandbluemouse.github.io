@@ -23,8 +23,7 @@
 &lt;/ol&gt;
 &lt;blockquote&gt;
 &lt;p&gt;上述三个原因对于c来说都是没有的，因此在cpp中使用c风格的输入输出可以极大的提速。
-但是c风格的输入输出更适合格式化输出，没有cin和cout的便捷，因此想要同时拥有便捷和速度的话就要解决这三个问题&lt;/p&gt;
-&lt;/blockquote&gt;
+但是c风格的输入输出更适合格式化输出，没有cin和cout的便捷，因此想要同时拥有便捷和速度的话就要解决这三个问题&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;取消同步流&#34;&gt;取消同步流
 &lt;/h3&gt;&lt;p&gt;什么是同步流？
 同步指的是c输出输入与cpp输出输入&lt;strong&gt;保持同步&lt;/strong&gt;，由于cpp为了兼容c，c输出输入与cpp输出输入使用的是&lt;strong&gt;同一块缓冲区&lt;/strong&gt;，我们将其称为&lt;strong&gt;c流缓冲区&lt;/strong&gt;
@@ -108,8 +107,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;值得注意的是，cout.tie(0)这个语句似乎是多余的，因为cout本来就与null绑定了,不过由于大家都这么写，所以还是写上&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;值得注意的是，cout.tie(0)这个语句似乎是多余的，因为cout本来就与null绑定了,不过由于大家都这么写，所以还是写上&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;用n代替endl&#34;&gt;用&amp;rsquo;\n&amp;rsquo;代替endl
 &lt;/h3&gt;&lt;p&gt;为何endl会比&amp;rsquo;\n&amp;rsquo;慢？
 实际上&lt;strong&gt;endl=&amp;rsquo;\n&amp;rsquo; + 强制刷新缓冲区&lt;/strong&gt;
@@ -136,8 +134,7 @@
 endl本身是&lt;strong&gt;会&lt;/strong&gt;刷新缓冲区的，并且，&lt;strong&gt;在下一行代码执行时他还会再次刷新&lt;/strong&gt;
 也就是说，&lt;strong&gt;endl&lt;/strong&gt;会比&amp;rsquo;\n&amp;rsquo;多刷新一次缓冲区，所以会慢一些&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;其实这也是一种安全性的措施，endl保证了在程序崩溃时，能完成输出，而&amp;rsquo;\n&amp;rsquo;则不能&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;其实这也是一种安全性的措施，endl保证了在程序崩溃时，能完成输出，而&amp;rsquo;\n&amp;rsquo;则不能&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;总结&#34;&gt;总结
 &lt;/h3&gt;&lt;p&gt;使cpp风格输入输出提速的解决方法就是&lt;/p&gt;
 &lt;ol&gt;
